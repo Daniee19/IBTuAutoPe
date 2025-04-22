@@ -3,5 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    //Corregir (cambiar) para evitar llamar al fragmento layout.navbar
+    return view('layout.navbar');
 });
