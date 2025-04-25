@@ -9,4 +9,13 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
-@import "./home.css"
+/*Usar var(--[nombre]) para obtener esa variable*/
+:root{
+    --naranja-principal: #E93600;
+    --blanco: #FFFFFF;
+    --azul-oscuro: #1E2A38;
+    --negro: #000000;
+    --gris-input: #EBEBEB;
+}
+
+@import "./fragmentos.css"
