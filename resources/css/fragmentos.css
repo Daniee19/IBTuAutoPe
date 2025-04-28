@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    background-color: #000000;
 }
 
 .nav_principal {
@@ -9,6 +10,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 90px;
+    border-bottom: 2px solid white;
 }
 
 .logo_icono {
@@ -16,28 +18,26 @@ body {
 }
 
 .lista.aparecer {
-    opacity: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease;
     transform: translateX(0%);
     pointer-events: auto;
 }
 
 .lista {
+    background: var(--gris-oscuro);
     display: flex;
     position: absolute;
     height: 100vh;
-    background-color: rgb(218, 218, 218);
     width: 80%;
     padding: 24px;
     gap: 25px;
-    color: var(--negro);
+    color: var(--blanco);
     transform: translateX(100%);
-    opacity: 1;
-    pointer-events: none;
     transition: 1.4s;
     top: 0px;
     right: 0px;
     flex-direction: column;
+    z-index: 999;
 }
 
 .icono_login_hamburguesa {
@@ -54,7 +54,6 @@ body {
     margin-top: 8px;
 }
 
-
 .lista li {
     padding: 10px;
     transition: all 0.2s;
@@ -69,19 +68,27 @@ body {
 }
 
 .lista .x_panel:hover {
-    background-color: rgb(218, 218, 218);
+
     transform: scale(1);
-    color: black;
+    background-color: transparent;
+}
+
+.i_text_login {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 @media (min-width: 992px) {
     .nav_principal {
         justify-content: space-around;
         gap: 0px;
+        transition: all 0.4s;
     }
 
     .nav_principal:hover {
-        background-color: var(--blanco);
+        background-color: var(--gris-oscuro);
+        border-bottom: 2px solid transparent;
     }
 
     .x_panel {
@@ -92,20 +99,18 @@ body {
         display: flex;
         position: relative;
         height: auto;
-
         width: 80%;
         padding: 20px;
         gap: 25px;
-        color: var(--negro);
         transform: translateX(0%);
         justify-content: center;
-
-        opacity: 1;
         flex-direction: row;
+        background-color: transparent;
     }
 
     .lista li {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
     }
 
     .iconito_hamburguesa {
@@ -116,4 +121,11 @@ body {
         width: 100px;
     }
 
+}
+
+@media (min-width: 1200px) {
+    .lista li {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
 }
