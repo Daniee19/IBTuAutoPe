@@ -8,18 +8,10 @@ const imagenes = [
 
 let indice = 0;
 
+//Cada 6 segundos se cambiará la imagen del array "imagenes"
 setInterval(() => {
-    //Desvanecer la imagen
-    imagen.style.opacity = 0;
-
-    setTimeout(() => {
-        //Cambiar la imagen despues de desvanecer
-        indice = (indice + 1) % imagenes.length;
-        imagen.src = imagenes[indice];
-
-        //Vuelve a aparecer
-        imagen.style.opacity = 1;
-
-    }, 800)
+    //Cambiar la imagen despues de desvanecer
+    indice = (indice + 1) % imagenes.length;
+    imagen.src = imagenes[indice];
 
 }, 6000);

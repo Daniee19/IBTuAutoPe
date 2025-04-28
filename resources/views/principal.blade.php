@@ -1,14 +1,15 @@
 @extends("layout.navbar")
 @section("content")
-    <div >
-        <img class="img_auto_portada" src="{{ asset("images/carro_toyota_4k.jpg") }}" alt="auto.jpg">
-        <div class="frase_eslogan">
-            <div class="">Calidad, seguridad y estilo en cada vehículo.</div>
-            <div class="saber_mas">
-                Saber más
-            </div>
+
+    <img class="img_auto_portada" src="{{ asset("images/carro_toyota_4k.jpg") }}" alt="auto.jpg">
+    <div class="frase_eslogan">
+        <div>Calidad, seguridad y estilo en cada vehículo.</div>
+        <div class="saber_mas">
+            Saber más
         </div>
-        <div class="datos_portada">
+    </div>
+    <div class="datos_portada">
+        <div>
             <div>
                 <span>+5</span> <br>
                 Años de garantía
@@ -26,4 +27,5 @@
             </div>
         </div>
     </div>
+
 @endsection

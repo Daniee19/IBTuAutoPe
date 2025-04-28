@@ -25,12 +25,17 @@
             <li>Ubicación</li>
         </ul>
         <div class="icono_login_hamburguesa">
-            <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-2xl" style="color: #ffffff"></i> &nbsp; Login </div>
+            <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i> &nbsp;
+                Login </div>
             <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></div>
         </div>
     </nav>
+    <div id="overlay_blur"></div>
 
     @yield("content")
+
+
+
 
     <script src="https://kit.fontawesome.com/c353473263.js" crossorigin="anonymous"></script>
 
