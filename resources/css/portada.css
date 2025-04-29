@@ -1,0 +1,112 @@
+.img_auto_portada {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100vw;
+    z-index: -1;
+    transition: all 0.6s;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.frase_eslogan {
+    font-size: 2.3rem;
+    color: white;
+    font-weight: 900;
+    margin: 40px auto;
+    width: 85%;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.saber_mas {
+    background-color: var(--naranja-principal);
+    padding: 10px 45px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    width: fit-content;
+    position: relative;
+    margin-top: 20px;
+    transition: all 0.4s;
+}
+
+.saber_mas:hover {
+    cursor: pointer;
+    background-color: var(--gris-oscuro);
+}
+
+.datos_portada {
+    display: flex;
+    right: 0px;
+    color: white;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.datos_portada span {
+    font-weight: 600;
+}
+
+.datos_portada hr {
+    width: 245px;
+    color: white;
+}
+
+.blur_filtro {
+    height: 100%;
+}
+
+.portada {
+    height: calc(100vh - 100px);
+}
+
+@media (min-width: 576px) {
+    .frase_eslogan {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .datos_portada {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .frase_eslogan {
+        font-size: 3.5rem;
+    }
+
+    .saber_mas {
+        font-size: 1.4rem;
+    }
+
+    .datos_portada {
+        font-size: 1.2rem;
+        margin-right: 100px;
+    }
+
+    .blur_filtro {
+        filter: blur(0px);
+    }
+}
+
+@media(min-width:1200px) {
+    .img_auto_portada {
+        height: 100vh;
+    }
+}
+
+@media(min-width:1400px) {
+    .frase_eslogan {
+        font-size: 7rem;
+    }
+
+    .datos_portada {
+        font-size: 1.4rem;
+        margin-right: 200px;
+    }
+
+}
