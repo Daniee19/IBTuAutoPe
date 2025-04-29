@@ -15,6 +15,8 @@
     font-weight: 900;
     margin: 40px auto;
     width: 85%;
+    margin: auto;
+    padding: 20px 0px;
 }
 
 .saber_mas {
@@ -56,6 +58,10 @@
     height: 100%;
 }
 
+.portada {
+    height: calc(100vh - 100px);
+}
+
 @media (min-width: 576px) {
     .frase_eslogan {
         font-size: 4rem;
@@ -71,7 +77,6 @@
 @media (min-width: 992px) {
     .frase_eslogan {
         font-size: 3.5rem;
-        margin: 10px auto;
     }
 
     .saber_mas {
@@ -97,7 +102,6 @@
 @media(min-width:1400px) {
     .frase_eslogan {
         font-size: 7rem;
-        margin: 16px auto;
     }
 
     .datos_portada {
