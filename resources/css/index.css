@@ -10,6 +10,7 @@ body {
     justify-content: space-between;
     gap: 90px;
     border-bottom: 2px solid white;
+    height: 100px;
 }
 
 .logo_icono {
@@ -23,7 +24,7 @@ body {
 }
 
 .lista {
-    background: var(--gris-oscuro);
+    background: var(--azul-oscuro);
     display: flex;
     position: fixed;
     height: 100vh;
@@ -78,6 +79,7 @@ body {
     font-weight: 600;
 }
 
+
 /*Permitirá agregar una capa para los elementos debajo del nav*/
 #overlay_blur {
     position: fixed;
@@ -98,6 +100,88 @@ body {
     opacity: 1;
 }
 
+/*FOOTER*/
+footer {
+    background-color: var(--azul-oscuro);
+}
+
+footer .footer-container {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 30px;
+    color: white;
+}
+
+
+footer .foot-primario {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #C5C5C5;
+    align-items: center;
+}
+
+footer .foot-primario h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    font-style: italic;
+}
+
+footer .redes_sociales {
+    justify-content: left;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+footer .redes_sociales i {
+    transition: all 0.3s ease;
+}
+
+footer .redes_sociales i:hover {
+    color: var(--naranja-principal);
+    cursor: pointer;
+}
+
+footer .foot-secundario {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #C5C5C5;
+    gap: 20px;
+}
+
+.footer-section h3 {
+    font-weight: 900;
+}
+
+.foot-terciario {
+    text-align: center;
+}
+
+@media (min-width: 575px) {
+    footer .foot-primario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .foot-primario .redes_sociales {
+        justify-content: center;
+    }
+
+    footer .foot-secundario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 768px) {
+    footer .foot-secundario {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media (min-width: 992px) {
     .nav_principal {
         justify-content: space-around;
@@ -107,7 +191,7 @@ body {
     }
 
     .nav_principal:hover {
-        background-color: var(--gris-oscuro);
+        background-color: var(--azul-oscuro);
         border-bottom: 2px solid transparent;
     }
 

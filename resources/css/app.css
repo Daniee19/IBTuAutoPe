@@ -20,5 +20,5 @@
     --gris-oscuro: #3a3a3a;
 }
 
-@import "./fragmentos.css";
+@import "./index.css";
 @import "./portada.css";
