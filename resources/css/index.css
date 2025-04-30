@@ -164,6 +164,26 @@ footer .foot-secundario {
     text-align: center;
 }
 
+.disenio_errores_index {
+    background-color: rgb(215, 76, 76);
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.disenio_errores_index h3 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contenedor_alerta {
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
 @media (min-width: 575px) {
     footer .foot-primario {
         grid-template-columns: repeat(2, 1fr);

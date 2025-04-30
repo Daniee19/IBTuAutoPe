@@ -79,7 +79,54 @@
                 <a href="#" class="btn-ver">Ver vehículos</a>
             </div>
         </section>
+    </section>
+    <!--Contáctanos-->
+    <section style="background-color: white;">
 
+        @if (!empty($errores))
+            <div class="contenedor_alerta">
+                <div class="disenio_errores_index">
+                    @if(count($errores) == 1)
+                        <h3>⚠️ Se encontró el siguiente error </h3>
+                    @elseif(count($errores) > 0)
+                        <h3>⚠️ Se encontraron los siguientes errores </h3>
+                    @endif
+                    @foreach ($errores as $error)
+                        <p>⚠️ {{ $error }}</p>
+                    @endforeach
+                </div>
+            </div>
+        @endif
 
+        </div>
+        <div class="container_contactanos">
+            <h2>Formulario de contacto</h2>
+            <form action="principal" method="POST">
+                @csrf
+                <div class="col-contactanos-primario">
+                    <div>
+                        <h3>Nombres:</h3>
+                        <input type="text" name="nombres">
+                    </div>
+                    <div>
+                        <h3>Correo:</h3>
+                        <input type="email" name="email">
+                    </div>
+                    <div>
+                        <h3>Celular:</h3>
+                        <input type="number" name="celular">
+                    </div>
+                    <div>
+                        <h3>Razón:</h3>
+                        <input type="text" name="razon">
+                    </div>
+                </div>
+                <h3>Tu mensaje:</h3>
+                <textarea placeholder="¿Cómo podemos ayudarte?" name="mensaje"></textarea>
+                <!-- Captcha-->
+                <div class="g-recaptcha" data-sitekey="6LfV4ikrAAAAAJ_fAq6lGuuq3NzBJ7Z4rZnPSJcA"> </div>
+                <button type="submit" name="enviar_contactanos">Enviar</button>
+            </form>
+        </div>
     </section>
 @endsection
