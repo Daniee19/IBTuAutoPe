@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -86,7 +86,7 @@
     <script src="{{ asset('js/advantages.js') }}"></script>
     <script src=" https://kit.fontawesome.com/c353473263.js" crossorigin="anonymous">
     </script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>
