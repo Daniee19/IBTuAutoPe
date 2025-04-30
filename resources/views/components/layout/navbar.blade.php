@@ -14,14 +14,15 @@
             <img class="logo_icono" src="{{ asset("images/img_logo.png") }}" alt="logo">
         </div>
         <ul>
-            <li>Principal</li>
-            <li>Ventajas</li>
-            <li>Vehículos</li>
-            <li>¿Quiénes somos?</li>
-            <li>Blog</li>
-            <li>Contacto</li>
-            <li>Ubicación</li>
+            <li><a href="/">Principal</a></li>
+            <li><a href="{{ route('advantages') }}">Ventajas</a></li>
+            <li><a href="#">Vehículos</a></li>
+            <li><a href="{{ route('about') }}">¿Quiénes somos?</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Ubicación</a></li>
         </ul>
+        
         <div>
             <span>Login <i class="fa-solid fa-right-to-bracket"></i></span>
         </div>
