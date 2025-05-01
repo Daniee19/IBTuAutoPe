@@ -14,6 +14,7 @@ body {
     gap: 90px;
     border-bottom: 2px solid white;
     height: 100px;
+    background-color: transparent;
 }
 
 .logo_icono {
@@ -71,7 +72,6 @@ body {
 }
 
 .lista .x_panel:hover {
-
     transform: scale(1);
     background-color: transparent;
 }
