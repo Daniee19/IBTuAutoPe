@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('principal');
 });
 
+Route::get('/vehiculo_seleccionado', function () {
+    return view('vehiculo_seleccionado');
+});
+
 Route::post('/principal', function () {
 
     $dotenv = Dotenv::createImmutable(__DIR__ . "/../");
