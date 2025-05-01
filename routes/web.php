@@ -59,3 +59,4 @@ Route::post('/principal', function () {
 
     return view('principal', ['errores' => $errores]);
 });
+

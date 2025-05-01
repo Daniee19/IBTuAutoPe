@@ -20,13 +20,13 @@
         </div>
         <ul class="lista">
             <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i></li>
-            <li>Principal</li>
-            <li>Ventajas</li>
-            <li>Vehículos</li>
-            <li>¿Quiénes somos?</li>
-            <li>Blog</li>
-            <li>Contacto</li>
-            <li>Ubicación</li>
+            <li><a href="/">Principal</a></li>
+            <li><a href="#">Ventajas</a></li>
+            <li><a href="#">Vehículos</a></li>
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Ubicación</a></li>
         </ul>
         <div class="icono_login_hamburguesa">
             <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>
