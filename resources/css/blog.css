@@ -1,0 +1,201 @@
+/* content */
+
+.blog-titulo h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 83px 16px;
+    background-color: white;
+}
+
+.blog-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 83px 16px;
+    background-color: white;
+}
+
+.blog_contenido {
+    background: #e0e0e0;
+    border-radius: 12px;
+    padding: 0px 0px 16px 0px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.blog_contenido:hover {
+    transform: scale(1.03);
+}
+
+.blog_contenido_imagen img {
+    width: 450px;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.btn_leer_mas {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ff4500;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog_contenido .blog_contenido_texto {
+    padding: 10px;
+}
+
+.blog_contenido .blog_contenido_texto>h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .nav_principal {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        padding: 8px 16px;
+    }
+
+    .icono_login_hamburguesa {
+        width: auto;
+        gap: 8px;
+    }
+
+    .i_text_login {
+        font-size: 1rem;
+    }
+}
+
+
+/* Tablets (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .blog {
+
+        padding: 60px 24px;
+    }
+
+    .blog_contenido {
+        width: 440px;
+        margin: 0 auto;
+    }
+
+    .blog_contenido_imagen img {
+        width: 440px;
+        height: auto;
+    }
+}
+
+/* Tablets grandes y laptops pequeñas (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .blog {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 60px 24px;
+    }
+
+    .blog_contenido {
+        width: 360px;
+    }
+
+    .blog_contenido_imagen img {
+        width: 360px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .blog_contenido_texto h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn_leer_mas {
+        font-size: 0.9rem;
+        padding: 6px 16px;
+    }
+}
+
+/* Laptops y escritorios pequeños (1025px a 1199px) */
+@media (min-width: 1025px) and (max-width: 1199px) {
+    .blog {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        padding: 80px 24px;
+    }
+
+    .blog_contenido {
+        width: 420px;
+    }
+
+    .blog_contenido_imagen img {
+        width: 420px;
+        height: auto;
+    }
+}
+
+/* Escritorio grande (desde 1200px en adelante) */
+@media (min-width: 1200px) {
+    .lista {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        transform: none;
+        background: transparent;
+        color: inherit;
+        padding: 0;
+        gap: 32px;
+    }
+
+    .lista li {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .iconito_hamburguesa {
+        display: none;
+    }
+
+    .x_panel {
+        display: none;
+    }
+
+    .blog {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .blog_contenido {
+        width: 450px;
+    }
+
+    .blog_contenido_imagen img {
+        width: 450px;
+        height: auto;
+    }
+}

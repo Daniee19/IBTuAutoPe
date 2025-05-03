@@ -1,5 +1,15 @@
 @extends("components.layout.index")
 @section("content")
+
+    <section>
+        <div style="background:white">
+            <div>holaaaa</div>
+            <div>holaaaa</div>
+            <div>holaaaa</div>
+        </div>
+    </section>
+
+
     <section class="section_información_detallada">
         <div class="container_informacion_detallada">
             <h3><i class="fa-solid fa-gear fa-xl" style="color: #e93600;"></i> General</h3>

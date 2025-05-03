@@ -156,7 +156,6 @@
         </div>
         </div>
     </div>
-
     <!--¿Quiénes somos?-->
     <section class="quienes_somos_section">
         <div class="contenedor_qs">
@@ -193,6 +192,68 @@
             </section>
         </div>
     </section>
+    <!-- Blog -->
+
+
+    <section class="blog-titulo">
+        <h1>Ultima noticia destacada</h1>
+        <div class="blog_contenido">
+            <div class="blog_contenido_imagen">
+                <img src="{{ asset('images/elon_nissan.png') }}" alt="Blog Image">
+            </div>
+            <div class="blog_contenido_texto">
+                <h2>¿Elon musk comprará Nissan?</h2>
+                <p>Publicado: 21/02/2025</p>
+            </div>
+            <a href="https://www.infobae.com/economia/2025/02/22/elon-musk-comprara-nissan-las-acciones-de-la-automotriz-subieron-luego-de-la-filtracion-de-un-informe-que-lo-sugeria/#:~:text=*%20Elon%20Musk%20dij
+                                o%20que%20la%20vinculaci%C3%B3n,f%C3%A1brica%20es%20%C3%BAnica%20en%20el%20mundo%20automotriz.&text=*%20Luego%20de%20interrumpir%20la%20fusi%C3%B3n%20anunciada,sigue%20en%20negociaciones%20con%20otr
+                                os%20posibles%20inversores." class="btn_leer_mas" target="_blank"
+                rel="noopener noreferrer">Leer
+                Más</a>
+        </div>
+    </section>
+    <section class="blog" style="background: #1E2A38;">
+        <div class="blog_contenido">
+            <div class="blog_contenido_imagen">
+                <img src="{{ asset('images/honda_sorpresa.png') }}" alt="Blog Image">
+            </div>
+            <div class="blog_contenido_texto">
+                <h2>¡Honda prepara una sorpresa!</h2>
+                <p>Publicado: 10/02/2025</p>
+            </div>
+            <a href="https://publimotos.com/actualidad/mundo/honda-prepara-una-sorpresa-filtrado-el-diseno-de-su-nueva-moto/"
+                class="btn_leer_mas" target="_blank" rel="noopener noreferrer">Leer Más</a>
+
+        </div>
+
+        <div class="blog_contenido">
+            <div class="blog_contenido_imagen">
+                <img src="{{ asset('images/top_autos_vendidos.png') }}" alt="Blog Image">
+            </div>
+            <div class="blog_contenido_texto">
+                <h2>Top autos mas vendidos en 2025</h2>
+                <p>Publicado: 02/04/2025</p>
+            </div>
+            <a href="https://www.coches.net/noticias/coches-mas-vendidos-2025" class="btn_leer_mas" target="_blank"
+                rel="noopener noreferrer">Leer Más</a>
+
+        </div>
+        <div class="blog_contenido">
+            <div class="blog_contenido_imagen">
+                <img src="{{ asset('images/volkswagen_crisis.png') }}" alt="Blog Image">
+            </div>
+            <div class="blog_contenido_texto">
+                <h2>¿Volkswagen en crisis?</h2>
+                <p>Publicado: 02/12/2024</p>
+            </div>
+            <a href="https://www.bbc.com/mundo/articles/c8dqp0j7n3vo" class="btn_leer_mas" target="_blank"
+                rel="noopener noreferrer">
+                Leer Más
+            </a>
+
+        </div>
+    </section>
+
     <!--Contáctanos-->
     <section style="background-color: white;">
 
@@ -211,7 +272,7 @@
             </div>
         @endif
 
-        </div>
+
         <div class="container_contactanos">
             <h2>Formulario de contacto</h2>
             <form action="principal" method="POST">
@@ -242,4 +303,27 @@
             </form>
         </div>
     </section>
+
+    <section class="section_ubicanos">
+        <div class="contenedor_ubicanos">
+            <div class="info_ubicanos">
+                <h3>Encuentra nuestra ubicación</h3>
+                <hr>
+                <h4><i class="fa-solid fa-location-dot" style="color: #1e2a38;"></i> Dirección: </h4>
+                <p>Av. Circunvalación Golf Los Incas Nro. 208, Torre 3, Oficina 602B , Santiago de Surco</p>
+                <h4><i class="fa-solid fa-mobile" style="color: #1e2a38;"></i> Móvil:</h4>
+                <p> (+51) 982 375 435</p>
+                <h4><i class="fa-solid fa-envelope" style="color: #1e2a38;"></i> Correo: </h4>
+                <p>ibtuautopel@corpibgroup.com</p>
+                <h4><i class="fa-solid fa-calendar-days" style="color: #1e2a38;"></i> Horario: </h4>
+                <p>Lunes - Viernes: 9am - 6pm</p>
+                <p>Sábados: 9am - 3pm</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26243.09045775808!2d-77.01873239959964!3d-12.108131566507778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1746289524060!5m2!1ses-419!2spe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
 @endsection
