@@ -23,8 +23,8 @@
             <li><a href="/">Principal</a></li>
             <li><a href="#">Ventajas</a></li>
             <li><a href="#">Vehículos</a></li>
-            <li><a href="#">¿Quiénes somos?</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="/formventas">¿Quiénes somos?</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Ubicación</a></li>
         </ul>

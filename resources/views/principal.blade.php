@@ -88,14 +88,14 @@
                 <h1>¿Quiénes somos?</h1>
             </div>
             <section class="section-images">
-                <div class="container">
-                    <img class="content inactive" src="{{ asset('images/img_logo.png') }}" alt="logo">
-                    <img class="content" src="{{ asset('images/img_logo.png') }}" alt="logo">
-                    <img class="content inactive" src="{{ asset('images/img_logo.png') }}" alt="logo">
+                <div class="container_about">
+                    <img class="content_about inactive" src="{{ asset('images/img_logo.png') }}" alt="logo">
+                    <img class="content_about" src="{{ asset('images/img_logo.png') }}" alt="logo">
+                    <img class="content_about inactive" src="{{ asset('images/img_logo.png') }}" alt="logo">
                 </div>
             </section>
             <section class="section-description">
-                <div class="description">
+                <div class="description_about">
                     <p>
                         En <strong>IBTUAUTOPE</strong>, somos un proyecto que nace con la pasión por el mundo automotriz.
                         Nos

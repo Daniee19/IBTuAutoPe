@@ -9,7 +9,12 @@ Route::get('/', function () {
 Route::get('/vehiculo_seleccionado', function () {
     return view('vehiculo_seleccionado');
 });
-
+Route::get('/blog', function () {
+    return view('blog');
+});
+Route::get('/formventas', function () {
+    return view('formventas');
+});
 Route::post('/principal', function () {
 
     $dotenv = Dotenv::createImmutable(__DIR__ . "/../");
