@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <span>+100k</span> <br>
-                    Clientes satisfechos
+                    Clientes satisfechos 
                     <hr>
                 </div>
             </div>
@@ -80,6 +80,82 @@
             </div>
         </section>
     </section>
+    <div class="container" style="background: white">
+            <!--Catalogo-->
+        <div class="filtros">
+            <h3>Buscar Filtros</h3>
+            <form>
+                <label>Marca:</label>
+                <select name="marca">
+                    <option value="">Seleccionar Marca</option>
+                </select>
+
+                <label>Modelo:</label>
+                <select name="modelo">
+                    <option value="">Seleccionar Modelo</option>
+                </select>
+
+                <label>Año:</label>
+                <input type="number" name="año">
+
+                <label>Hasta:</label>
+                <input type="number" name="hasta">
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+
+        <div class="container" style="background: white">
+        <div class="vehiculos">
+            <h2>Vehículos Disponibles</h2>
+            <div class="catalogo">
+                <div class="tarjeta">
+                    <div class="imagen_car"><img src="{{ asset("images/catalogo/toyota_rarrr.png") }}" alt="Auto"> </div>
+                    <p><strong>TOYOTA</strong></p>
+                    <p>2019 | Mecánica | Gasolina</p>
+                    <p><strong>$9300</strong></p>
+                    <button>Ver más</button>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen_car"> <img src="{{ asset("images/catalogo/mercedes_run.png") }}" alt="Auto"></div>
+                    <p><strong>MERCEDES</strong></p>
+                    <p>2017 | Mecánica | Gasolina</p>
+                    <p><strong>$11300</strong></p>
+                    <button>Ver más</button>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen_car"><img src="{{ asset("images/catalogo/honda_ron.png") }}" alt="Auto"></div>
+                    <p><strong>HONDA</strong></p>
+                    <p>2018 | Mecánica | Gasolina</p>
+                    <p><strong>$10300</strong></p>
+                    <button>Ver más</button>
+                </div>
+                <div class="tarjeta">
+                <div class="imagen_car"><img src="{{ asset("images/catalogo/suzuki_rar.png") }}"alt="Auto"></div>
+                    <p><strong>SUZUKI</strong></p>
+                    <p>2020 | Mecánica | Gasolina</p>
+                    <p><strong>$12000</strong></p>
+                    <button>Ver más</button>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen_car"> <img src="{{ asset("images/catalogo/kia_rioo.png") }}" alt="Auto"></div>
+                    <p><strong>Kia</strong></p>
+                    <p>2023 | Mecánica | Gasolina</p>
+                    <p><strong>$11700</strong></p>
+                    <button>Ver más</button>
+                </div>
+                <div class="tarjeta">
+                    <div class="imagen_car"> <img src="{{ asset("images/catalogo/chevrolet_tu.png") }}" alt="Auto"></div>
+                    <p><strong>CHEVROLET</strong></p>
+                    <p>2021 | Mecánica | Gasolina</p>
+                    <p><strong>$15900</strong></p>
+                    <button>Ver más</button>
+                </div>
+                
+            </div>
+        </div>
+        </div>
+    </div>
 
     <!--¿Quiénes somos?-->
     <section class="quienes_somos_section">
