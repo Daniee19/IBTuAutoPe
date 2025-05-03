@@ -80,7 +80,7 @@
             </div>
         </section>
     </section>
-
+    <!-- -->
     <!--¿Quiénes somos?-->
     <section class="quienes_somos_section">
         <div class="contenedor_qs">
@@ -135,7 +135,7 @@
             </div>
         @endif
 
-        </div>
+
         <div class="container_contactanos">
             <h2>Formulario de contacto</h2>
             <form action="principal" method="POST">
@@ -166,4 +166,27 @@
             </form>
         </div>
     </section>
+
+    <section class="section_ubicanos">
+        <div class="contenedor_ubicanos">
+            <div class="info_ubicanos">
+                <h3>Encuentra nuestra ubicación</h3>
+                <hr>
+                <h4><i class="fa-solid fa-location-dot" style="color: #1e2a38;"></i> Dirección: </h4>
+                <p>Av. Circunvalación Golf Los Incas Nro. 208, Torre 3, Oficina 602B , Santiago de Surco</p>
+                <h4><i class="fa-solid fa-mobile" style="color: #1e2a38;"></i> Móvil:</h4>
+                <p> (+51) 982 375 435</p>
+                <h4><i class="fa-solid fa-envelope" style="color: #1e2a38;"></i> Correo: </h4>
+                <p>ibtuautopel@corpibgroup.com</p>
+                <h4><i class="fa-solid fa-calendar-days" style="color: #1e2a38;"></i> Horario: </h4>
+                <p>Lunes - Viernes: 9am - 6pm</p>
+                <p>Sábados: 9am - 3pm</p>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26243.09045775808!2d-77.01873239959964!3d-12.108131566507778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2spe!4v1746289524060!5m2!1ses-419!2spe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
 @endsection
