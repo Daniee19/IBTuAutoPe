@@ -9,7 +9,9 @@ Route::get('/', function () {
 Route::get('/vehiculo_seleccionado', function () {
     return view('vehiculo_seleccionado');
 });
-
+Route::get('/blog', function () {
+    return view('blog');
+});
 Route::post('/principal', function () {
 
     $dotenv = Dotenv::createImmutable(__DIR__ . "/../");
@@ -28,7 +30,7 @@ Route::post('/principal', function () {
         $ip = $_SERVER["REMOTE_ADDR"];
         $captcha = $_POST["g-recaptcha-response"];
 
-        $$respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$SECRET_KEY&response=$captcha&remoteip=$ip");
+        $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$SECRET_KEY&response=$captcha&remoteip=$ip");
 
         $atributos = json_decode($respuesta, TRUE);
 

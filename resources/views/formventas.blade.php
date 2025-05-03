@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -30,16 +29,16 @@
             <li><a href="#">Ubicación</a></li>
         </ul>
         <div class="icono_login_hamburguesa">
-            <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl" ></i>
+            <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl"></i>
                 &nbsp;
                 Login </div>
-            <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl" ></i></div>
+            <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl"></i></div>
         </div>
-        
+
     </header>
     <hr>
-   
-    
+
+
 
 
     <!--Contáctanos-->
@@ -60,7 +59,7 @@
             </div>
         @endif
 
-        </div>
+
         <div class="container">
             <h2>Formulario de Compra</h2>
             <form action="formventas" method="POST">
@@ -86,7 +85,7 @@
                             <input type="text" name="telefono">
                         </div>
                     </div>
-                
+
                     <div class="fila-horizontal">
                         <div>
                             <h3>Tipo documento:</h3>
@@ -100,17 +99,17 @@
                             <h3>Modelo:</h3>
                             <input type="text" name="modelo">
                         </div>
-                  
+
                     </div>
                     <div class="fila-kilometraje">
                         <div>
                             <h3>Kilometraje:</h3>
-                        
+
                             <label style="display: flex; gap: 10px; align-items: center; justify-content: center;">
                                 <input type="text" name="kilometraje">
                                 km
                             </label>
-                           
+
                         </div>
                         <div>
                             <h3>Año de Fabricación:</h3>
@@ -121,10 +120,10 @@
                             <input type="text" name="placa">
                         </div>
                     </div>
-                  
-                    
+
+
                 </div>
-                
+
                 <h3>Tu mensaje:</h3>
                 <textarea placeholder="¿Cómo podemos ayudarte?" name="mensaje"></textarea>
 
@@ -132,17 +131,18 @@
                     <input type="file" name="archivo" />
                     Elegir Archivos
                 </label>
-                
-                
+
+
                 <!-- Captcha-->
                 <div style="display: flex; align-items: center; justify-content: center;">
-                    <div class="g-recaptcha" data-sitekey="6Lf8nSwrAAAAANwBbn0kgj_hwZS_pIL-6bAZupes" > </div>
+                    <div class="g-recaptcha" data-sitekey="6Lf8nSwrAAAAANwBbn0kgj_hwZS_pIL-6bAZupes"> </div>
                 </div>
-                
+
                 <button type="submit" name="enviar" style="display: block">Enviar</button>
             </form>
         </div>
     </section>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
+
 </html>

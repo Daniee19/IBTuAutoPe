@@ -9,8 +9,6 @@
 }
 
 .header_qs {
-    background-color: #E93600;
-    color: white;
     text-align: left;
     padding: 15px 30px;
     margin: 0px;
@@ -22,6 +20,7 @@
     margin: 0 0 0 40px;
     font-weight: bold;
     font-size: 25px;
+    color: rgb(0, 0, 0);
 }
 
 .section-images {
