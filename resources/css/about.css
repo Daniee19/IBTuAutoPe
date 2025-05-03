@@ -6,12 +6,13 @@
     margin: 0 auto;
     max-width: 1400px;
     background-color: white;
+    padding-top: 20px;
 }
 
 .header_qs {
     text-align: left;
-    padding: 15px 30px;
-    margin: 20px;
+    padding: 25px 30px;
+    margin: 0px 20px;
     width: fit-content;
     border-radius: 0 10px 10px 0;
 }
@@ -53,21 +54,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin: 0;
+    margin: 0 auto;
     flex-direction: column;
-    padding: 20px;
+    padding: 0px 40px;
+    /* width: 100%; */
+    max-width: 1200px;
 }
 
 .description {
-    width: 1200px;
+    width: 100%;
     height: auto;
-    background-color: #e93600ee;
-    color: white;
-    padding: 50px;
+    background-color: #ffffffee;
+    color: rgb(0, 0, 0);
+    padding: 20px;
     border-radius: 20px;
     font-size: 20px;
-
 }
 
 /*boton*/
@@ -102,9 +103,7 @@
     }
 
     .description {
-        width: 1200px;
         font-size: 20px;
-        padding: 50px;
     }
 
     .btn-ver {

@@ -23,7 +23,7 @@
                 </div>
                 <div>
                     <span>+100k</span> <br>
-                    Clientes satisfechos 
+                    Clientes satisfechos
                     <hr>
                 </div>
             </div>
@@ -80,80 +80,84 @@
             </div>
         </section>
     </section>
-    <div class="container" style="background: white">
-            <!--Catalogo-->
+    <div class="container_filtro" style="background: white">
+        <!--Catalogo-->
         <div class="filtros">
-            <h3>Buscar Filtros</h3>
+            <h3>Filtrar vehículo</h3>
             <form>
-                <label>Marca:</label>
-                <select name="marca">
-                    <option value="">Seleccionar Marca</option>
-                </select>
+                <div>
+                    <label>Marca:</label>
+                    <select name="marca">
+                        <option value="">Seleccionar Marca</option>
+                    </select>
 
-                <label>Modelo:</label>
-                <select name="modelo">
-                    <option value="">Seleccionar Modelo</option>
-                </select>
+                    <label>Modelo:</label>
+                    <select name="modelo">
+                        <option value="">Seleccionar Modelo</option>
+                    </select>
 
-                <label>Año:</label>
-                <input type="number" name="año">
+                    <label>Año:</label>
+                    <input type="number" name="año">
 
-                <label>Hasta:</label>
-                <input type="number" name="hasta">
-
+                    <label>Hasta:</label>
+                    <input type="number" name="hasta">
+                </div>
                 <button type="submit">Filtrar</button>
             </form>
         </div>
 
         <div class="container" style="background: white">
-        <div class="vehiculos">
-            <h2>Vehículos Disponibles</h2>
-            <div class="catalogo">
-                <div class="tarjeta">
-                    <div class="imagen_car"><img src="{{ asset("images/catalogo/toyota_rarrr.png") }}" alt="Auto"> </div>
-                    <p><strong>TOYOTA</strong></p>
-                    <p>2019 | Mecánica | Gasolina</p>
-                    <p><strong>$9300</strong></p>
-                    <button>Ver más</button>
+            <div class="vehiculos">
+                <h2>Vehículos Disponibles</h2>
+                <div class="catalogo">
+                    <div class="tarjeta">
+                        <div class="imagen_car"><img src="{{ asset("images/catalogo/toyota_rarrr.png") }}" alt="Auto">
+                        </div>
+                        <p><strong>TOYOTA</strong></p>
+                        <p>2019 | Mecánica | Gasolina</p>
+                        <p><strong>$9300</strong></p>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="imagen_car"> <img src="{{ asset("images/catalogo/mercedes_run.png") }}" alt="Auto">
+                        </div>
+                        <p><strong>MERCEDES</strong></p>
+                        <p>2017 | Mecánica | Gasolina</p>
+                        <p><strong>$11300</strong></p>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="imagen_car"><img src="{{ asset("images/catalogo/honda_ron.png") }}" alt="Auto"></div>
+                        <p><strong>HONDA</strong></p>
+                        <p>2018 | Mecánica | Gasolina</p>
+                        <p><strong>$10300</strong></p>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="imagen_car"><img src="{{ asset("images/catalogo/suzuki_rar.png") }}" alt="Auto"></div>
+                        <p><strong>SUZUKI</strong></p>
+                        <p>2020 | Mecánica | Gasolina</p>
+                        <p><strong>$12000</strong></p>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="imagen_car"> <img src="{{ asset("images/catalogo/kia_rioo.png") }}" alt="Auto"></div>
+                        <p><strong>Kia</strong></p>
+                        <p>2023 | Mecánica | Gasolina</p>
+                        <p><strong>$11700</strong></p>
+                        <button>Ver más</button>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="imagen_car"> <img src="{{ asset("images/catalogo/chevrolet_tu.png") }}" alt="Auto">
+                        </div>
+                        <p><strong>CHEVROLET</strong></p>
+                        <p>2021 | Mecánica | Gasolina</p>
+                        <p><strong>$15900</strong></p>
+                        <button>Ver más</button>
+                    </div>
+
                 </div>
-                <div class="tarjeta">
-                    <div class="imagen_car"> <img src="{{ asset("images/catalogo/mercedes_run.png") }}" alt="Auto"></div>
-                    <p><strong>MERCEDES</strong></p>
-                    <p>2017 | Mecánica | Gasolina</p>
-                    <p><strong>$11300</strong></p>
-                    <button>Ver más</button>
-                </div>
-                <div class="tarjeta">
-                    <div class="imagen_car"><img src="{{ asset("images/catalogo/honda_ron.png") }}" alt="Auto"></div>
-                    <p><strong>HONDA</strong></p>
-                    <p>2018 | Mecánica | Gasolina</p>
-                    <p><strong>$10300</strong></p>
-                    <button>Ver más</button>
-                </div>
-                <div class="tarjeta">
-                <div class="imagen_car"><img src="{{ asset("images/catalogo/suzuki_rar.png") }}"alt="Auto"></div>
-                    <p><strong>SUZUKI</strong></p>
-                    <p>2020 | Mecánica | Gasolina</p>
-                    <p><strong>$12000</strong></p>
-                    <button>Ver más</button>
-                </div>
-                <div class="tarjeta">
-                    <div class="imagen_car"> <img src="{{ asset("images/catalogo/kia_rioo.png") }}" alt="Auto"></div>
-                    <p><strong>Kia</strong></p>
-                    <p>2023 | Mecánica | Gasolina</p>
-                    <p><strong>$11700</strong></p>
-                    <button>Ver más</button>
-                </div>
-                <div class="tarjeta">
-                    <div class="imagen_car"> <img src="{{ asset("images/catalogo/chevrolet_tu.png") }}" alt="Auto"></div>
-                    <p><strong>CHEVROLET</strong></p>
-                    <p>2021 | Mecánica | Gasolina</p>
-                    <p><strong>$15900</strong></p>
-                    <button>Ver más</button>
-                </div>
-                
             </div>
-        </div>
         </div>
     </div>
     <!--¿Quiénes somos?-->
@@ -193,8 +197,6 @@
         </div>
     </section>
     <!-- Blog -->
-
-
     <section class="blog-titulo">
         <h1>Ultima noticia destacada</h1>
         <div class="blog_contenido">
@@ -206,8 +208,8 @@
                 <p>Publicado: 21/02/2025</p>
             </div>
             <a href="https://www.infobae.com/economia/2025/02/22/elon-musk-comprara-nissan-las-acciones-de-la-automotriz-subieron-luego-de-la-filtracion-de-un-informe-que-lo-sugeria/#:~:text=*%20Elon%20Musk%20dij
-                                o%20que%20la%20vinculaci%C3%B3n,f%C3%A1brica%20es%20%C3%BAnica%20en%20el%20mundo%20automotriz.&text=*%20Luego%20de%20interrumpir%20la%20fusi%C3%B3n%20anunciada,sigue%20en%20negociaciones%20con%20otr
-                                os%20posibles%20inversores." class="btn_leer_mas" target="_blank"
+                                                o%20que%20la%20vinculaci%C3%B3n,f%C3%A1brica%20es%20%C3%BAnica%20en%20el%20mundo%20automotriz.&text=*%20Luego%20de%20interrumpir%20la%20fusi%C3%B3n%20anunciada,sigue%20en%20negociaciones%20con%20otr
+                                                os%20posibles%20inversores." class="btn_leer_mas" target="_blank"
                 rel="noopener noreferrer">Leer
                 Más</a>
         </div>

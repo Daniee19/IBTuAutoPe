@@ -3,7 +3,8 @@
     padding: 60px 20px;
 }
 
-.marcas-section h2 {
+.marcas-section h2,
+.ventajas-section h2 {
     text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
