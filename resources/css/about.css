@@ -68,15 +68,7 @@
     font-size: 20px;
 }
 
-.description {
-    width: 100%;
-    height: auto;
-    background-color: #ffffffee;
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    border-radius: 20px;
-    font-size: 20px;
-}
+
 
 /*boton*/
 .btn-container {
