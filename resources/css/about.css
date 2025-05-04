@@ -58,17 +58,16 @@
 }
 
 .description_about {
-    padding: 0px 40px;
     width: 100%;
     max-width: 1200px;
     height: auto;
     background-color: #e93600ee;
     color: white;
-    padding: 50px;
+    padding: 50px 40px;
     border-radius: 20px;
     font-size: 20px;
-
 }
+
 
 /*boton*/
 .btn-container {
