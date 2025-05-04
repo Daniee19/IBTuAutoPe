@@ -58,7 +58,9 @@
 }
 
 .description_about {
-    width: 1200px;
+    padding: 0px 40px;
+    /* width: 100%; */
+    max-width: 1200px;
     height: auto;
     background-color: #e93600ee;
     color: white;
