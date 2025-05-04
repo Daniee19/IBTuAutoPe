@@ -59,18 +59,15 @@
 
 .description_about {
     width: 100%;
-    max-width: 1200px;
     height: auto;
-    background-color: #e93600ee;
-    color: white;
-    padding: 50px 40px;
+    background-color: #ffffffee;
+    color: rgb(0, 0, 0);
+    padding: 20px;
     border-radius: 20px;
     font-size: 20px;
+
 }
 
-.description {
-    font-size: 20px;
-}
 
 
 
