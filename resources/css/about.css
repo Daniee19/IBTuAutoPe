@@ -32,7 +32,7 @@
     margin: 0;
 }
 
-.container {
+.container_about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,12 +40,12 @@
     margin: 0;
 }
 
-.content {
+.content_about {
     width: 350px;
     height: auto;
 }
 
-.content.inactive {
+.content_about.inactive {
     opacity: 0.6;
     filter: grayscale(100%);
 }
@@ -56,20 +56,22 @@
     align-items: center;
     margin: 0 auto;
     flex-direction: column;
-    padding: 0px 40px;
-    /* width: 100%; */
-    max-width: 1200px;
+
 }
 
-.description {
-    width: 100%;
+.description_about {
+     width: 1200px;
     height: auto;
-    background-color: #ffffffee;
-    color: rgb(0, 0, 0);
-    padding: 20px;
+    background-color: #e93600ee;
+    color: white;
+    padding: 50px;
     border-radius: 20px;
     font-size: 20px;
 }
+
+
+
+
 
 /*boton*/
 .btn-container {
@@ -92,19 +94,18 @@
     background-color: #c02700;
 }
 
+/* Escritorio grande  */
 @media (min-width: 1025px) {
-    .container {
+    .container_about {
         flex-direction: row;
         gap: 40px;
     }
 
-    .content {
+    .content_about {
         width: 350px;
     }
 
-    .description {
-        font-size: 20px;
-    }
+
 
     .btn-ver {
         font-size: 18px;
@@ -112,13 +113,11 @@
     }
 }
 
-
-
+/* === Tablets y laptops pequeñas (768px a 1024px) === */
 @media (max-width: 1024px) {
     .header_qs {
-        font-size: 22px;
         padding: 10px 20px;
-        width: fit-content;
+        border-radius: 0 10px 10px 0;
     }
 
     .header_qs h1 {
@@ -126,19 +125,18 @@
         margin-left: 15px;
     }
 
-    .container {
+    .container_about {
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        display: flex;
-        gap: 0;
+        gap: 20px;
     }
 
-    .content {
+    .content_about {
         width: 250px;
-        height: auto;
     }
 
-
-    .description {
+    .description_about {
         width: 90%;
         font-size: 18px;
         padding: 40px;
@@ -150,35 +148,108 @@
     }
 }
 
-
-
-@media (max-width: 767px) {
+/* === Móviles pequeños (hasta 480px) === */
+@media (max-width: 480px) {
     .header_qs {
-        font-size: 20px;
         padding: 8px 16px;
-        width: fit-content;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .header_qs h1 {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .container_about {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .content_about {
+        width: 100px;
+    }
+
+    .description_about {
+        width: 100%;
+        font-size: 15px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .btn-ver {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+}
+
+/* Móviles pequeños  */
+@media (max-width: 480px) {
+    .header_qs {
+        padding: 8px 16px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .header_qs h1 {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    .container_about {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .content_about {
+        width: 100px;
+    }
+
+    .description_about {
+        width: 100%;
+        font-size: 15px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .btn-ver {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+}
+
+/* Móviles medianos */
+@media (min-width: 481px) and (max-width: 767px) {
+    .header_qs {
+        padding: 10px 20px;
         border-radius: 0 8px 8px 0;
     }
 
     .header_qs h1 {
         font-size: 20px;
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
-    .container {
-        display: flex;
-        gap: 0;
+    .container_about {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
     }
 
-    .content {
+    .content_about {
         width: 150px;
     }
 
-    .description {
-        width: 100%;
+    .description_about {
+        width: 90%;
         font-size: 16px;
         padding: 30px 20px;
-        border-radius: 20px;
     }
 
     .btn-ver {
@@ -187,28 +258,59 @@
     }
 }
 
-
-
-@media (max-width: 480px) {
-    .container {
-        display: flex;
-        gap: 0;
+/* === Tablets*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header_qs {
+        padding: 12px 24px;
+        border-radius: 0 10px 10px 0;
     }
 
-    .content {
-        width: 100px;
-        height: auto;
+    .header_qs h1 {
+        font-size: 22px;
+        margin-left: 20px;
     }
 
-    .description {
-        padding: 20px;
-        font-size: 15px;
+    .container_about {
+        flex-direction: row;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .content_about {
+        width: 250px;
+    }
+
+    .description_about {
+        width: 90%;
+        font-size: 18px;
+        padding: 40px;
     }
 
     .btn-ver {
-        width: 100%;
-        padding: 10px;
-        font-size: 15px;
-        box-sizing: border-box;
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* Escritorio grande*/
+@media (min-width: 1025px) {
+    .container_about {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .content_about {
+        width: 350px;
+    }
+
+    .description_about {
+        width: 1200px;
+        font-size: 20px;
+        padding: 50px;
+    }
+
+    .btn-ver {
+        font-size: 18px;
+        padding: 15px 30px;
     }
 }
