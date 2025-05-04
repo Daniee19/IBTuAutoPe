@@ -1,0 +1,42 @@
+.section_ubicanos {
+    background-color: white;
+    height: auto;
+}
+
+.contenedor_ubicanos {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 20px 50px 20px;
+    align-items: center;
+}
+
+.info_ubicanos>h3 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+.info_ubicanos>h4 {
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.contenedor_ubicanos>iframe {
+    padding: 10px;
+    width: 100%;
+}
+
+@media (min-width:768px) {
+    .section_ubicanos {
+        height: 60vh;
+    }
+
+    .contenedor_ubicanos {
+        flex-direction: row;
+        align-items: start;
+    }
+}
