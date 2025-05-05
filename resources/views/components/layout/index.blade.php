@@ -13,25 +13,25 @@
 </head>
 
 <body>
-
     <header class="nav_principal">
         <div>
             <img class="logo_icono" src="{{ asset("images/img_logo.png") }}" alt="logo">
         </div>
         <ul class="lista">
             <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i></li>
-            <li><a href="/">Principal</a></li>
-            <li><a href="#">Ventajas</a></li>
-            <li><a href="#">Vehículos</a></li>
-            <li><a href="/formventas">¿Quiénes somos?</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Ubicación</a></li>
+            <li><a href="./#portada">Principal</a></li>
+            <li><a href="./#vista_ventajas">Ventajas</a></li>
+            <li><a href="./#catalogo_vehiculos">Vehículos</a></li>
+            <li><a href="./#quienes_somos">¿Quiénes somos?</a></li>
+            <li><a href="./#blog">Blog</a></li>
+            <li><a href="./#contactanos">Contacto</a></li>
+            <li><a href="./#ubicanos">Ubicación</a></li>
         </ul>
         <div class="icono_login_hamburguesa">
             <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>
                 &nbsp;
-                Login </div>
+                <a href="./formventas">Login</a>
+            </div>
             <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></div>
         </div>
     </header>
@@ -42,10 +42,11 @@
         @yield("content")
     </main>
 
-    <footer>
+    <footer style="background-color: var(--gris-oscuro);">
         <div class="footer-container">
             <div class="foot-primario">
-                <h2>TuAutoPe</h2>
+                <h2>TuAutoPe <img class="logo_icono" src="{{ asset("images/img_logo.png") }}" alt="logo"></h2>
+
                 <div>
                     <div class="redes_sociales">Visítanos tambien en:
                         <i class="fa-brands fa-facebook"></i><i class="fa-brands fa-linkedin"></i> <i

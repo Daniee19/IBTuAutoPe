@@ -45,14 +45,17 @@
     gap: 10px;
 }
 
-.datos_portada span {
+.datos_portada h4 {
     font-weight: 600;
 }
 
 .datos_portada hr {
     width: 245px;
     color: white;
+    margin-bottom: 10px;
 }
+
+
 
 .blur_filtro {
     height: 100%;

@@ -1,21 +1,42 @@
 /* General (móviles primero) */
 .blog {
     display: flex;
-    background-color: #ffffff;
+    background-color: var(--gris-oscuro);
     align-items: center;
     justify-content: center;
     gap: 32px;
     padding: 40px 16px;
     flex-wrap: wrap;
+
 }
 
-.blog h1 {
+.blog-titulo {
+    background: white;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.blog-titulo h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--azul-oscuro);
+    color: var(--gris-oscuro);
     text-align: center;
     font-style: italic;
     margin-bottom: 20px;
+    padding-top: 44px;
+}
+
+.blog_contenido_titulo {
+    background: #e0e0e0;
+    border-radius: 12px;
+    padding: 0px 0px 16px 0px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    margin: 0 auto;
 }
 
 .blog_contenido {
@@ -29,7 +50,7 @@
     transition: transform 0.2s ease;
 }
 
-.blog_contenido:hover {
+.blog_contenido:hover, .blog_contenido_titulo:hover {
     transform: scale(1.03);
 }
 
@@ -42,6 +63,8 @@
 
 .blog_contenido_texto h2 {
     margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .btn_leer_mas {

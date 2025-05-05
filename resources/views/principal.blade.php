@@ -2,7 +2,7 @@
 @section("content")
 
     <img class="img_auto_portada" src="{{ asset("images/carro_toyota_4k.jpg") }}" alt="auto.jpg">
-    <section class="portada">
+    <section class="portada" id="portada">
         <div class="frase_eslogan">
             <div>Calidad, seguridad y estilo en cada vehículo.</div>
             <div class="saber_mas">
@@ -11,25 +11,19 @@
         </div>
         <div class="datos_portada">
             <div>
-                <div>
-                    <span>+5</span> <br>
-                    Años de garantía
-                    <hr>
-                </div>
-                <div>
-                    <span>+100</span> <br>
-                    Modelos exclusivos
-                    <hr>
-                </div>
-                <div>
-                    <span>+100k</span> <br>
-                    Clientes satisfechos
-                    <hr>
-                </div>
+                <h4>+5</h4>
+                <p>Años de garantía</p>
+                <hr>
+                <h4>+100</h4>
+                <p>Modelos exclusivos</p>
+                <hr>
+                <h4>+100k</h4>
+                <p>Clientes satisfechos</p>
+                <hr>
             </div>
         </div>
     </section>
-    <section style="background-color: white;">
+    <section style="background-color: white;" id="vista_ventajas">
         <!-- Carrusel de marcas -->
         <section class="marcas-section">
             <h2>OFRECEMOS PRODUCTOS DE LAS MEJORES MARCAS</h2>
@@ -80,7 +74,7 @@
             </div>
         </section>
     </section>
-    <div class="container_filtro" style="background: white">
+    <section class="container_filtro" style="background: white" id="catalogo_vehiculos">
         <!--Catalogo-->
         <div class="filtros">
             <h3>Filtrar vehículo</h3>
@@ -159,9 +153,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!--¿Quiénes somos?-->
-    <section class="quienes_somos_section">
+    <section class="quienes_somos_section" id="quienes_somos">
         <div class="contenedor_qs">
             <div class="header_qs">
                 <h1>¿Quiénes somos?</h1>
@@ -197,9 +191,9 @@
         </div>
     </section>
     <!-- Blog -->
-    <section class="blog-titulo">
+    <section class="blog-titulo" id="blog">
         <h1>Ultima noticia destacada</h1>
-        <div class="blog_contenido">
+        <div class="blog_contenido_titulo">
             <div class="blog_contenido_imagen">
                 <img src="{{ asset('images/elon_nissan.png') }}" alt="Blog Image">
             </div>
@@ -208,13 +202,13 @@
                 <p>Publicado: 21/02/2025</p>
             </div>
             <a href="https://www.infobae.com/economia/2025/02/22/elon-musk-comprara-nissan-las-acciones-de-la-automotriz-subieron-luego-de-la-filtracion-de-un-informe-que-lo-sugeria/#:~:text=*%20Elon%20Musk%20dij
-                                                o%20que%20la%20vinculaci%C3%B3n,f%C3%A1brica%20es%20%C3%BAnica%20en%20el%20mundo%20automotriz.&text=*%20Luego%20de%20interrumpir%20la%20fusi%C3%B3n%20anunciada,sigue%20en%20negociaciones%20con%20otr
-                                                os%20posibles%20inversores." class="btn_leer_mas" target="_blank"
-                rel="noopener noreferrer">Leer
+                                                                                    o%20que%20la%20vinculaci%C3%B3n,f%C3%A1brica%20es%20%C3%BAnica%20en%20el%20mundo%20automotriz.&text=*%20Luego%20de%20interrumpir%20la%20fusi%C3%B3n%20anunciada,sigue%20en%20negociaciones%20con%20otr
+                                                                                    os%20posibles%20inversores."
+                class="btn_leer_mas" target="_blank" rel="noopener noreferrer">Leer
                 Más</a>
         </div>
     </section>
-    <section class="blog" style="background: #1E2A38;">
+    <section class="blog">
         <div class="blog_contenido">
             <div class="blog_contenido_imagen">
                 <img src="{{ asset('images/honda_sorpresa.png') }}" alt="Blog Image">
@@ -257,7 +251,7 @@
     </section>
 
     <!--Contáctanos-->
-    <section style="background-color: white;">
+    <section style="background-color: white;" id="contactanos">
 
         @if (!empty($errores))
             <div class="contenedor_alerta">
@@ -307,7 +301,7 @@
     </section>
 
     <section class="section_ubicanos">
-        <div class="contenedor_ubicanos">
+        <div class="contenedor_ubicanos" id="ubicanos">
             <div class="info_ubicanos">
                 <h3>Encuentra nuestra ubicación</h3>
                 <hr>
