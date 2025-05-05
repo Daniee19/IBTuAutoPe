@@ -1,3 +1,22 @@
+# Desarrollo Web - Gestión de vehículos
+
+## Capturas
+![Portada](public/images/readme/fondo_portada.jpg)
+
+![Ventajas](public/images/readme/ventajas.jpg)
+
+![Catálogo](public/images/readme/catalogo.jpg)
+
+![Quienes_somos](public/images/readme/qs.jpg)
+
+![Blog](public/images/readme/blog.jpg)
+
+![Contáctanos](public/images/readme/contactanos.jpg)
+
+![Ubícanos](public/images/readme/ubicanos.jpg)
+
+![Footer](public/images/readme/footer.jpg)
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
