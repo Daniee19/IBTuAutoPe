@@ -17,7 +17,8 @@
     --azul-oscuro: #1E2A38;
     --negro: #000000;
     --gris-input: #EBEBEB;
-    --gris-oscuro: #3a3a3a;
+    --gris-oscuro: #2c2c2c;
+    scroll-behavior: smooth;
 }
 
 @import "./index.css";
@@ -26,11 +27,7 @@
 @import "./advantages.css";
 @import "./contactanos.css";
 @import "./vehiculo_escogido.css";
-
 @import "./formventas.css";
 @import "./blog.css";
 @import "./compra.css";
 @import "./ubicanos.css";
-@import "./blog.css";
-
-
