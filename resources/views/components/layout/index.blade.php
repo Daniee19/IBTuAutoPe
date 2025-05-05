@@ -28,12 +28,35 @@
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Ubicación</a></li>
         </ul>
-        <div class="icono_login_hamburguesa">
-            <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>
-                &nbsp;
-                Login </div>
-            <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></div>
-        </div>
+        @php
+            $logueado = session('usuario_logueado', false);
+        @endphp
+    
+        @if (!$logueado)
+            <a href="/login">
+                <div class="icono_login_hamburguesa">
+                    <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>
+                        &nbsp;
+                        Login 
+                    </div>
+                    <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></div>
+                </div>
+            </a>
+        @endif
+        @if ($logueado)
+            <a href="/logout">
+                <div class="icono_login_hamburguesa">
+                    <div class="i_text_login">
+                        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff"></i>
+                        &nbsp;
+                        Cerrar sesión
+                    </div>
+                </div>
+            </a>
+        @endif
+    
+    
+      
     </header>
 
     <div id="overlay_blur"></div>
