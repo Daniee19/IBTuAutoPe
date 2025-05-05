@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Dotenv\Dotenv;
+use App\Http\Controllers\CatalogoController;
+
+
 Route::get('/', function () {
     return view('principal');
 });
@@ -12,7 +15,6 @@ Route::get('/vehiculo_seleccionado', function () {
 Route::get('/blog', function () {
     return view('blog');
 });
-
 Route::get('/formventas', function () {
     return view('formventas');
 });
@@ -86,7 +88,7 @@ Route::post('/formventas', function () {
         $kilometraje = $_POST["kilometraje"];
         $anio_fabricacion = $_POST["anio_fabricacion"];
         $placa = $_POST["placa"];
-   
+
         $mensaje = $_POST["mensaje"];
 
         //Te va a dar la ip del servidor
@@ -140,8 +142,10 @@ Route::post('/formventas', function () {
         if (empty($mensaje)) {
             $errores[] = "El campo mensaje es obligatorio";
         }
-  
+
     }
 
     return view('formventas', ['errores' => $errores]);
 });
+
+Route::get('/catalogo', [CatalogoController::class, 'index'])->name('filtrar');
