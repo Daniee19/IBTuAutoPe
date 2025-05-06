@@ -1,8 +1,13 @@
 @extends("components.layout.index")
 @section("content")
+    @if (session('exito'))
+        <div class="alerta_exito">
+            <p>✅ {{ session('exito') }}</p>
+        </div>
+    @endif
 
     <img class="img_auto_portada" src="{{ asset("images/carro_toyota_4k.jpg") }}" alt="auto.jpg">
-    <section class="portada">
+    <section class="portada" id="principal">
         <div class="frase_eslogan">
             <div>Calidad, seguridad y estilo en cada vehículo.</div>
             <div class="saber_mas">
@@ -29,7 +34,7 @@
             </div>
         </div>
     </section>
-    <section style="background-color: white;">
+    <section style="background-color: white;" id="ventajas">
         <!-- Carrusel de marcas -->
         <section class="marcas-section">
             <h2>OFRECEMOS PRODUCTOS DE LAS MEJORES MARCAS</h2>
@@ -161,7 +166,7 @@
         </div>
     </div>
     <!--¿Quiénes somos?-->
-    <section class="quienes_somos_section">
+    <section class="quienes_somos_section" id="quienes_somos">
         <div class="contenedor_qs">
             <div class="header_qs">
                 <h1>¿Quiénes somos?</h1>
@@ -198,7 +203,7 @@
     </section>
     <!-- Blog -->
   
-    <section class="blog">
+    <section class="blog" id="blog">
         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
             <h1>Ultima noticia destacada</h1>
             <div class="blog_contenido">
@@ -276,7 +281,7 @@
     </section>   
 
     <!--Contáctanos-->
-    <section style="background-color: white;">
+    <section style="background-color: white;" id="contacto">
 
         @if (!empty($errores))
             <div class="contenedor_alerta">
@@ -296,7 +301,7 @@
 
         <div class="container_contactanos">
             <h2>Formulario de contacto</h2>
-            <form action="principal" method="POST">
+            <form action="{{ route('contacto.enviar') }}" method="POST">
                 @csrf
                 <div class="col-contactanos-primario">
                     <div>
@@ -325,7 +330,7 @@
         </div>
     </section>
 
-    <section class="section_ubicanos">
+    <section class="section_ubicanos" id="ubicacion">
         <div class="contenedor_ubicanos">
             <div class="info_ubicanos">
                 <h3>Encuentra nuestra ubicación</h3>

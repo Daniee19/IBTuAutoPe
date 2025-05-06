@@ -16,34 +16,37 @@
 
     <header class="nav_principal">
         <div>
-            <img class="logo_icono" src="{{ asset("images/img_logo.png") }}" alt="logo">
+            <img class="logo_icono" src="{{ asset('images/img_logo.png') }}" alt="logo">
         </div>
+    
         <ul class="lista">
             <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i></li>
-            <li><a href="/">Principal</a></li>
-            <li><a href="#">Ventajas</a></li>
-            <li><a href="#">Vehículos</a></li>
-            <li><a href="{{ route('formventas.procesar') }}">¿Quiénes somos?</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Ubicación</a></li>
+            <li><a href="{{ route('home') }}">Principal</a></li>
+            <li><a href="{{ url('/#ventajas') }}">Ventajas</a></li>
+            <li><a href="{{ url('/#vehiculos') }}">Vehículos</a></li>
+            <li><a href="{{ url('/#quienes_somos') }}">¿Quiénes somos?</a></li>
+            <li><a href="{{ url('/#blog') }}">Blog</a></li>
+            <li><a href="{{ url('/#contacto') }}">Contacto</a></li>
+            <li><a href="{{ url('/#ubicacion') }}">Ubicación</a></li>
         </ul>
+        
+    
         @php
             $logueado = session('usuario_logueado', false);
         @endphp
     
         @if (!$logueado)
-            <a href="/login">
+            <a href="{{ route('login.form') }}">
                 <div class="icono_login_hamburguesa">
-                    <div class="i_text_login"><i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>
-                        &nbsp;
-                        Login 
+                    <div class="i_text_login">
+                        <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>&nbsp;Login
                     </div>
-                    <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></div>
+                    <div class="iconito_hamburguesa">
+                        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+                    </div>
                 </div>
             </a>
-        @endif
-        @if ($logueado)
+        @else
             <form action="{{ route('logout') }}" method="GET" style="display: inline;">
                 <button class="icono_login_hamburguesa" style="border: none; background: none; cursor: pointer;">
                     <div class="i_text_login">
@@ -51,12 +54,9 @@
                     </div>
                 </button>
             </form>
-        
         @endif
-    
-    
-      
     </header>
+    
 
     <div id="overlay_blur"></div>
 

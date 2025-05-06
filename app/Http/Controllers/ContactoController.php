@@ -4,29 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Contacto;
 
 class ContactoController extends Controller
 {
     public function enviar(Request $request)
     {
         $errores = [];
-
+    
         if (!$this->validarCaptcha($request->input('g-recaptcha-response'), 'SECRET_KEY')) {
             $errores[] = "Verificar captcha";
         }
-
+    
         $validator = Validator::make($request->all(), [
             'nombres' => 'required',
             'email' => 'required|email',
+            'celular' => 'nullable|string|max:20',
             'razon' => 'required',
             'mensaje' => 'required',
         ]);
-
+    
         if ($validator->fails()) {
             $errores = array_merge($errores, $validator->errors()->all());
+            return back()->withErrors($errores)->withInput();
         }
-
-        return view('principal', ['errores' => $errores]);
+    
+        // Guardar en base de datos
+        Contacto::create($request->only([
+            'nombres', 'email', 'celular', 'razon', 'mensaje'
+        ]));
+    
+        return redirect()->back()->with('exito', 'Tu mensaje ha sido enviado correctamente.');
     }
 
     private function validarCaptcha($token, $envKey) {
