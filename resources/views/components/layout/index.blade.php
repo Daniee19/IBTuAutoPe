@@ -23,7 +23,7 @@
             <li><a href="/">Principal</a></li>
             <li><a href="#">Ventajas</a></li>
             <li><a href="#">Vehículos</a></li>
-            <li><a href="/formventas">¿Quiénes somos?</a></li>
+            <li><a href="{{ route('formventas.procesar') }}">¿Quiénes somos?</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Ubicación</a></li>
@@ -44,15 +44,14 @@
             </a>
         @endif
         @if ($logueado)
-            <a href="/logout">
-                <div class="icono_login_hamburguesa">
+            <form action="{{ route('logout') }}" method="GET" style="display: inline;">
+                <button class="icono_login_hamburguesa" style="border: none; background: none; cursor: pointer;">
                     <div class="i_text_login">
-                        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff"></i>
-                        &nbsp;
-                        Cerrar sesión
+                        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff"></i>&nbsp;Cerrar sesión
                     </div>
-                </div>
-            </a>
+                </button>
+            </form>
+        
         @endif
     
     
@@ -107,7 +106,7 @@
 
     <!-- Carrusel JS -->
     <script src="{{ asset('js/advantages.js') }}"></script>
-    <script src=" https://kit.fontawesome.com/c353473263.js" crossorigin="anonymous">
+
     </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
