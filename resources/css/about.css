@@ -56,11 +56,11 @@
     align-items: center;
     margin: 0 auto;
     flex-direction: column;
-
+    max-width: 90%;
 }
 
 .description_about {
-     width: 1200px;
+    width: 1200px;
     height: auto;
     background-color: #e93600ee;
     color: white;

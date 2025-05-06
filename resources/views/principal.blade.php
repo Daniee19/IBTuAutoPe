@@ -3,24 +3,95 @@
 
     <img class="img_auto_portada" src="{{ asset("images/carro_toyota_4k.jpg") }}" alt="auto.jpg">
     <section class="portada" id="portada">
-        <div class="frase_eslogan">
-            <div>Calidad, seguridad y estilo en cada vehículo.</div>
-            <div class="saber_mas">
-                Saber más
+        <div>
+            <div class="frase_eslogan">
+                <div>Calidad, seguridad y estilo en cada vehículo.</div>
+                <div class="saber_mas">
+                    Saber más
+                </div>
+            </div>
+            <div class="datos_portada">
+                <div>
+                    <h4>+5</h4>
+                    <p>Años de garantía</p>
+                    <hr>
+                    <h4>+100</h4>
+                    <p>Modelos exclusivos</p>
+                    <hr>
+                    <h4>+100k</h4>
+                    <p>Clientes satisfechos</p>
+                    <hr>
+                </div>
             </div>
         </div>
-        <div class="datos_portada">
-            <div>
-                <h4>+5</h4>
-                <p>Años de garantía</p>
-                <hr>
-                <h4>+100</h4>
-                <p>Modelos exclusivos</p>
-                <hr>
-                <h4>+100k</h4>
-                <p>Clientes satisfechos</p>
-                <hr>
+    </section>
+    <section class="container_filtro" style="background: white" id="catalogo_vehiculos">
+        <h2>Tenemos +2000 vehículos esperando por ti</h2>
+        <div class="filtros">
+            <div class="filtro_cabecera">
+                <div>
+                    <i class="fa-solid fa-car"></i>
+                    Autos
+                </div>
+                <div><i class="fa-solid fa-motorcycle"></i> Motos</div>
+                <div><i class="fa-solid fa-truck-front"></i> Camiones</div>
             </div>
+            <!-- usa el .filtrar como llave -->
+            <div class="filtro_contenido">
+                <form method="GET" action="{{ route('filtrar') }}">
+                    <div class="ordenar_filtros">
+                        <div class="bloque_filtro">
+                            <label>Tipo de vehículo</label>
+                            <select name="tipo_vehiculo">
+                                <option value="" selected>Todos los vehículos</option>
+                                <option value="Toyota">Usados</option>
+                                <option value="Mercedes">Seminuevos</option>
+                                <option value="Honda">Nuevos</option>
+                            </select>
+                        </div>
+                        <div class="bloque_filtro">
+                            <label>Elegir marca</label>
+                            <select name="marca">
+                                <option value="" selected>Todas las Marcas</option>
+                                <option value="Toyota">TOYOTA</option>
+                                <option value="Mercedes">MERCEDES</option>
+                                <option value="Honda">HONDA</option>
+                                <option value="Suzuki">SUZUKI</option>
+                                <option value="Kia">KIA</option>
+                                <option value="Chevrolet">CHEVROLET</option>
+                            </select>
+                        </div>
+                        <div class="bloque_filtro">
+                            <label>Elegir modelo</label>
+                            <select name="modelo">
+                                <option value="">Todos los modelos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit">Filtrar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="container" style="background: white">
+                                                                                                        <div class="vehiculos">
+                                                                                                            <h2>Vehículos Disponibles</h2>
+                                                                                                            <div class="catalogo">
+                                                                                                                @if(!empty($vehiculos_filtro))
+                                                                                                                    @foreach($vehiculos_filtro as $v)
+                                                                                                                        <div class="tarjeta">
+                                                                                                                            <div class="imagen_car"><img src='{{ $v->foto }}' alt="Auto">
+                                                                                                                            </div>
+                                                                                                                            <p><strong>{{ $v->marca }}</strong></p>
+                                                                                                                            <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
+                                                                                                                            <p><strong>${{ $v->precio }}</strong></p>
+                                                                                                                            <button>Ver más</button>
+                                                                                                                        </div>
+                                                                                                                    @endforeach
+                                                                                                                @endif
+
+                                                                                                            </div>
+                                                                                                        </div> -->
         </div>
     </section>
     <section style="background-color: white;" id="vista_ventajas">
@@ -75,59 +146,7 @@
         </section>
     </section>
     <!--Catalogo-->
-    <section class="container_filtro" style="background: white" id="catalogo_vehiculos">
-        <div class="filtros">
-            <h3>Filtrar vehículo</h3>
-            <!-- usa el .filtrar como llave -->
-            <form method="GET" action="{{ route('filtrar') }}">
-                <div>
-                    <label>Marca:</label>
-                    <select name="marca">
-                        <option value="" selected>Seleccionar Marca</option>
-                        <option value="Toyota">TOYOTA</option>
-                        <option value="Mercedes">MERCEDES</option>
-                        <option value="Honda">HONDA</option>
-                        <option value="Suzuki">SUZUKI</option>
-                        <option value="Kia">KIA</option>
-                        <option value="Chevrolet">CHEVROLET</option>
-                    </select>
-                    <!-- 
-                                                                    <label>Modelo:</label>
-                                                                    <select name="modelo">
-                                                                        <option value="">Seleccionar Modelo</option>
-                                                                    </select>
 
-                                                                    <label>Año:</label>
-                                                                    <input type="number" name="año">
-
-                                                                    <label>Hasta:</label>
-                                                                    <input type="number" name="hasta"> -->
-                </div>
-                <button type="submit">Filtrar</button>
-            </form>
-        </div>
-
-        <div class="container" style="background: white">
-            <div class="vehiculos">
-                <h2>Vehículos Disponibles</h2>
-                <div class="catalogo">
-                    @if(!empty($vehiculos_filtro))
-                        @foreach($vehiculos_filtro as $v)
-                            <div class="tarjeta">
-                                <div class="imagen_car"><img src='{{ $v->foto }}'  alt="Auto">
-                                </div>
-                                <p><strong>{{ $v->marca }}</strong></p>
-                                <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
-                                <p><strong>${{ $v->precio }}</strong></p>
-                                <button>Ver más</button>
-                            </div>
-                        @endforeach
-                    @endif
-
-                </div>
-            </div>
-        </div>
-    </section>
     <!--¿Quiénes somos?-->
     <section class="quienes_somos_section" id="quienes_somos">
         <div class="contenedor_qs">
@@ -144,15 +163,18 @@
             <section class="section-description">
                 <div class="description_about">
                     <p>
-                        En <strong>IBTUAUTOPE</strong>, somos un proyecto que nace con la pasión por el mundo automotriz.
+                        En <strong>IBTUAUTOPE</strong>, somos un proyecto que nace con la pasión por el mundo
+                        automotriz.
                         Nos
-                        especializamos en la venta de autos y motos, ofreciendo vehículos de calidad, seguros y a precios
+                        especializamos en la venta de autos y motos, ofreciendo vehículos de calidad, seguros y a
+                        precios
                         competitivos.
                         Nuestra misión es conectar a nuestros clientes con el vehículo ideal, brindando asesoría
                         personalizada y
                         un
                         servicio confiable desde el primer contacto.
-                        Aunque estamos dando nuestros primeros pasos, nuestro compromiso es ser una referencia de confianza
+                        Aunque estamos dando nuestros primeros pasos, nuestro compromiso es ser una referencia de
+                        confianza
                         en
                         el
                         sector automotor.
@@ -176,8 +198,8 @@
                 <p>Publicado: 21/02/2025</p>
             </div>
             <a href="https://www.infobae.com/economia/2025/02/22/elon-musk-comprara-nissan-las-acciones-de-la-automotriz-subieron-luego-de-la-filtracion-de-un-informe-que-lo-sugeria/#:~:text=*%20Elon%20Musk%20dij
-                                                                                                                                                    o%20que%20la%20vinculaci%C3%B3n,f%C3%A1brica%20es%20%C3%BAnica%20en%20el%20mundo%20automotriz.&text=*%20Luego%20de%20interrumpir%20la%20fusi%C3%B3n%20anunciada,sigue%20en%20negociaciones%20con%20otr
-                                                                                                                                                    os%20posibles%20inversores."
+                                                                                                                                                                                                                                                    o%20que%20la%20vinculaci%C3%B3n,f%C3%A1brica%20es%20%C3%BAnica%20en%20el%20mundo%20automotriz.&text=*%20Luego%20de%20interrumpir%20la%20fusi%C3%B3n%20anunciada,sigue%20en%20negociaciones%20con%20otr
+                                                                                                                                                                                                                                                    os%20posibles%20inversores."
                 class="btn_leer_mas" target="_blank" rel="noopener noreferrer">Leer
                 Más</a>
         </div>

@@ -13,9 +13,11 @@ body {
     justify-content: space-between;
     gap: 90px;
     border-bottom: 2px solid white;
-    height: 100px;
-    background-color: transparent;
-    color: white;
+    height: 90px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 
 .logo_icono {
@@ -30,20 +32,21 @@ body {
 }
 
 .lista {
-    background: var(--gris-oscuro);
+    background: white;
     display: flex;
     position: fixed;
     height: 100vh;
     width: 80%;
     padding: 16px 16px 24px 24px;
     gap: 25px;
-    color: var(--blanco);
+
     transform: translateX(100%);
     transition: 1.4s;
     top: 0px;
     right: 0px;
     flex-direction: column;
     z-index: 999;
+    color: black;
 }
 
 .icono_login_hamburguesa {
@@ -68,7 +71,6 @@ body {
 
 .lista li:hover {
     text-decoration: underline;
-    color: white;
     cursor: pointer;
 }
 
@@ -78,11 +80,10 @@ body {
 }
 
 .i_text_login {
-    color: white;
+    color: #000000;
     font-size: 1.3rem;
     font-weight: 600;
 }
-
 
 /*Permitirá agregar una capa para los elementos debajo del nav*/
 #overlay_blur {
@@ -212,10 +213,10 @@ footer .foot-secundario {
         text-align: center;
     }
 
-    .nav_principal:hover {
+    /* .nav_principal:hover {
         background-color: var(--gris-oscuro);
         border-bottom: 2px solid transparent;
-    }
+    } */
 
     .x_panel {
         display: none;
