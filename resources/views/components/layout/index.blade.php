@@ -15,27 +15,47 @@
 <body>
     <header class="nav_principal">
         <div>
-            <img class="logo_icono" src="{{ asset("images/img_logo.png") }}" alt="logo">
+            <img class="logo_icono" src="{{ asset('images/img_logo.png') }}" alt="logo">
         </div>
+    
         <ul class="lista">
-            <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></li>
-            <li><a href="./#portada">Principal</a></li>
-            <li><a href="./#catalogo_vehiculos">Vehículos</a></li>
-            <li><a href="./#vista_ventajas">Ventajas</a></li>
-            <li><a href="./#quienes_somos">¿Quiénes somos?</a></li>
-            <li><a href="./#blog">Blog</a></li>
-            <li><a href="./#contactanos">Contacto</a></li>
-            <li><a href="./#ubicanos">Ubicación</a></li>
+            <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i></li>
+            <li><a href="{{ route('home') }}">Principal</a></li>
+            <li><a href="{{ url('/#ventajas') }}">Ventajas</a></li>
+            <li><a href="{{ url('/#vehiculos') }}">Vehículos</a></li>
+            <li><a href="{{ url('/#quienes_somos') }}">¿Quiénes somos?</a></li>
+            <li><a href="{{ url('/#blog') }}">Blog</a></li>
+            <li><a href="{{ url('/#contacto') }}">Contacto</a></li>
+            <li><a href="{{ url('/#ubicacion') }}">Ubicación</a></li>
         </ul>
-        <div class="icono_login_hamburguesa">
-            <div class="i_text_login">
-                <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #000000"></i>
-                &nbsp;
-                <a href="./formventas">Login</a>
-            </div>
-            <div class="iconito_hamburguesa"><i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i></div>
-        </div>
+        
+    
+        @php
+            $logueado = session('usuario_logueado', false);
+        @endphp
+    
+        @if (!$logueado)
+            <a href="{{ route('login.form') }}">
+                <div class="icono_login_hamburguesa">
+                    <div class="i_text_login">
+                        <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>&nbsp;Login
+                    </div>
+                    <div class="iconito_hamburguesa">
+                        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+            </a>
+        @else
+            <form action="{{ route('logout') }}" method="GET" style="display: inline;">
+                <button class="icono_login_hamburguesa" style="border: none; background: none; cursor: pointer;">
+                    <div class="i_text_login">
+                        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff"></i>&nbsp;Cerrar sesión
+                    </div>
+                </button>
+            </form>
+        @endif
     </header>
+    
 
     <div id="overlay_blur"></div>
 
@@ -86,7 +106,7 @@
 
     <!-- Carrusel JS -->
     <script src="{{ asset('js/advantages.js') }}"></script>
-    <script src=" https://kit.fontawesome.com/c353473263.js" crossorigin="anonymous">
+
     </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>

@@ -29,5 +29,13 @@
 @import "./vehiculo_escogido.css";
 @import "./formventas.css";
 @import "./blog.css";
-@import "./catalogo.css";
+
+@import "./compra.css";
 @import "./ubicanos.css";
+@import "./login.css";
+@import "./register.css"
+
+
+@import "./catalogo.css";
+
+
