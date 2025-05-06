@@ -1,10 +1,14 @@
 <?php
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\VentaVehiculoController;
 use App\Http\Controllers\VistaController;
+use Dotenv\Dotenv;
+use App\Http\Controllers\CatalogoController;
+
 
 // Página principal
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -24,7 +28,5 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 // Vistas generales
 Route::get('/vehiculo_seleccionado', [VistaController::class, 'vehiculo'])->name('vehiculo');
 Route::get('/blog', [VistaController::class, 'blog'])->name('blog');
-
-
 
 

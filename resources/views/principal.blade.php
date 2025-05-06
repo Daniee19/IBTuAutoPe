@@ -7,33 +7,98 @@
     @endif
 
     <img class="img_auto_portada" src="{{ asset("images/carro_toyota_4k.jpg") }}" alt="auto.jpg">
+
     <section class="portada" id="principal">
         <div class="frase_eslogan">
             <div>Calidad, seguridad y estilo en cada vehículo.</div>
             <div class="saber_mas">
                 Saber más
             </div>
-        </div>
-        <div class="datos_portada">
-            <div>
+            <div class="datos_portada">
                 <div>
-                    <span>+5</span> <br>
-                    Años de garantía
+                    <h4>+5</h4>
+                    <p>Años de garantía</p>
                     <hr>
-                </div>
-                <div>
-                    <span>+100</span> <br>
-                    Modelos exclusivos
+                    <h4>+100</h4>
+                    <p>Modelos exclusivos</p>
                     <hr>
-                </div>
-                <div>
-                    <span>+100k</span> <br>
-                    Clientes satisfechos
+                    <h4>+100k</h4>
+                    <p>Clientes satisfechos</p>
                     <hr>
                 </div>
             </div>
         </div>
     </section>
+    <section class="container_filtro" style="background: white" id="catalogo_vehiculos">
+        <h2>Tenemos +2000 vehículos esperando por ti</h2>
+        <div class="filtros">
+            <div class="filtro_cabecera">
+                <div>
+                    <i class="fa-solid fa-car"></i>
+                    Autos
+                </div>
+                <div><i class="fa-solid fa-motorcycle"></i> Motos</div>
+                <div><i class="fa-solid fa-truck-front"></i> Camiones</div>
+            </div>
+            <!-- usa el .filtrar como llave -->
+            <div class="filtro_contenido">
+                <form method="GET" action="{{ route('filtrar') }}">
+                    <div class="ordenar_filtros">
+                        <div class="bloque_filtro">
+                            <label>Tipo de vehículo</label>
+                            <select name="tipo_vehiculo">
+                                <option value="" selected>Todos los vehículos</option>
+                                <option value="Toyota">Usados</option>
+                                <option value="Mercedes">Seminuevos</option>
+                                <option value="Honda">Nuevos</option>
+                            </select>
+                        </div>
+                        <div class="bloque_filtro">
+                            <label>Elegir marca</label>
+                            <select name="marca">
+                                <option value="" selected>Todas las Marcas</option>
+                                <option value="Toyota">TOYOTA</option>
+                                <option value="Mercedes">MERCEDES</option>
+                                <option value="Honda">HONDA</option>
+                                <option value="Suzuki">SUZUKI</option>
+                                <option value="Kia">KIA</option>
+                                <option value="Chevrolet">CHEVROLET</option>
+                            </select>
+                        </div>
+                        <div class="bloque_filtro">
+                            <label>Elegir modelo</label>
+                            <select name="modelo">
+                                <option value="">Todos los modelos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit">Filtrar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="container" style="background: white">
+                                                                                                        <div class="vehiculos">
+                                                                                                            <h2>Vehículos Disponibles</h2>
+                                                                                                            <div class="catalogo">
+                                                                                                                @if(!empty($vehiculos_filtro))
+                                                                                                                    @foreach($vehiculos_filtro as $v)
+                                                                                                                        <div class="tarjeta">
+                                                                                                                            <div class="imagen_car"><img src='{{ $v->foto }}' alt="Auto">
+                                                                                                                            </div>
+                                                                                                                            <p><strong>{{ $v->marca }}</strong></p>
+                                                                                                                            <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
+                                                                                                                            <p><strong>${{ $v->precio }}</strong></p>
+                                                                                                                            <button>Ver más</button>
+                                                                                                                        </div>
+                                                                                                                    @endforeach
+                                                                                                                @endif
+
+                                                                                                            </div>
+                                                                                                        </div> -->
+        </div>
+    </section>
+
     <section style="background-color: white;" id="ventajas">
         <!-- Carrusel de marcas -->
         <section class="marcas-section">
@@ -85,86 +150,8 @@
             </div>
         </section>
     </section>
-    <div class="container_filtro" style="background: white">
-        <!--Catalogo-->
-        <div class="filtros">
-            <h3>Filtrar vehículo</h3>
-            <form>
-                <div>
-                    <label>Marca:</label>
-                    <select name="marca">
-                        <option value="">Seleccionar Marca</option>
-                    </select>
+    <!--Catalogo-->
 
-                    <label>Modelo:</label>
-                    <select name="modelo">
-                        <option value="">Seleccionar Modelo</option>
-                    </select>
-
-                    <label>Año:</label>
-                    <input type="number" name="año">
-
-                    <label>Hasta:</label>
-                    <input type="number" name="hasta">
-                </div>
-                <button type="submit">Filtrar</button>
-            </form>
-        </div>
-
-        <div class="container" style="background: white">
-            <div class="vehiculos">
-                <h2>Vehículos Disponibles</h2>
-                <div class="catalogo">
-                    <div class="tarjeta">
-                        <div class="imagen_car"><img src="{{ asset("images/catalogo/toyota_rarrr.png") }}" alt="Auto">
-                        </div>
-                        <p><strong>TOYOTA</strong></p>
-                        <p>2019 | Mecánica | Gasolina</p>
-                        <p><strong>$9300</strong></p>
-                        <button>Ver más</button>
-                    </div>
-                    <div class="tarjeta">
-                        <div class="imagen_car"> <img src="{{ asset("images/catalogo/mercedes_run.png") }}" alt="Auto">
-                        </div>
-                        <p><strong>MERCEDES</strong></p>
-                        <p>2017 | Mecánica | Gasolina</p>
-                        <p><strong>$11300</strong></p>
-                        <button>Ver más</button>
-                    </div>
-                    <div class="tarjeta">
-                        <div class="imagen_car"><img src="{{ asset("images/catalogo/honda_ron.png") }}" alt="Auto"></div>
-                        <p><strong>HONDA</strong></p>
-                        <p>2018 | Mecánica | Gasolina</p>
-                        <p><strong>$10300</strong></p>
-                        <button>Ver más</button>
-                    </div>
-                    <div class="tarjeta">
-                        <div class="imagen_car"><img src="{{ asset("images/catalogo/suzuki_rar.png") }}" alt="Auto"></div>
-                        <p><strong>SUZUKI</strong></p>
-                        <p>2020 | Mecánica | Gasolina</p>
-                        <p><strong>$12000</strong></p>
-                        <button>Ver más</button>
-                    </div>
-                    <div class="tarjeta">
-                        <div class="imagen_car"> <img src="{{ asset("images/catalogo/kia_rioo.png") }}" alt="Auto"></div>
-                        <p><strong>Kia</strong></p>
-                        <p>2023 | Mecánica | Gasolina</p>
-                        <p><strong>$11700</strong></p>
-                        <button>Ver más</button>
-                    </div>
-                    <div class="tarjeta">
-                        <div class="imagen_car"> <img src="{{ asset("images/catalogo/chevrolet_tu.png") }}" alt="Auto">
-                        </div>
-                        <p><strong>CHEVROLET</strong></p>
-                        <p>2021 | Mecánica | Gasolina</p>
-                        <p><strong>$15900</strong></p>
-                        <button>Ver más</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
     <!--¿Quiénes somos?-->
     <section class="quienes_somos_section" id="quienes_somos">
         <div class="contenedor_qs">
@@ -181,15 +168,18 @@
             <section class="section-description">
                 <div class="description_about">
                     <p>
-                        En <strong>IBTUAUTOPE</strong>, somos un proyecto que nace con la pasión por el mundo automotriz.
+                        En <strong>IBTUAUTOPE</strong>, somos un proyecto que nace con la pasión por el mundo
+                        automotriz.
                         Nos
-                        especializamos en la venta de autos y motos, ofreciendo vehículos de calidad, seguros y a precios
+                        especializamos en la venta de autos y motos, ofreciendo vehículos de calidad, seguros y a
+                        precios
                         competitivos.
                         Nuestra misión es conectar a nuestros clientes con el vehículo ideal, brindando asesoría
                         personalizada y
                         un
                         servicio confiable desde el primer contacto.
-                        Aunque estamos dando nuestros primeros pasos, nuestro compromiso es ser una referencia de confianza
+                        Aunque estamos dando nuestros primeros pasos, nuestro compromiso es ser una referencia de
+                        confianza
                         en
                         el
                         sector automotor.
@@ -202,6 +192,7 @@
         </div>
     </section>
     <!-- Blog -->
+
   
     <section class="blog" id="blog">
         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -228,6 +219,7 @@
         
     </section>    
     <section class="blog" style="background: #1E2A38;">
+
         <div class="blog_contenido">
             <div class="blog_contenido_imagen">
                 <img src="{{ asset('images/honda_sorpresa.png') }}" alt="Blog Image">
@@ -281,7 +273,9 @@
     </section>   
 
     <!--Contáctanos-->
+
     <section style="background-color: white;" id="contacto">
+
 
         @if (!empty($errores))
             <div class="contenedor_alerta">
@@ -330,8 +324,10 @@
         </div>
     </section>
 
+
     <section class="section_ubicanos" id="ubicacion">
         <div class="contenedor_ubicanos">
+
             <div class="info_ubicanos">
                 <h3>Encuentra nuestra ubicación</h3>
                 <hr>

@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <header class="nav_principal">
         <div>
             <img class="logo_icono" src="{{ asset('images/img_logo.png') }}" alt="logo">
@@ -64,10 +63,11 @@
         @yield("content")
     </main>
 
-    <footer>
+    <footer style="background-color: var(--gris-oscuro);">
         <div class="footer-container">
             <div class="foot-primario">
-                <h2>TuAutoPe</h2>
+                <h2>TuAutoPe <img class="logo_icono" src="{{ asset("images/img_logo.png") }}" alt="logo"></h2>
+
                 <div>
                     <div class="redes_sociales">Visítanos tambien en:
                         <i class="fa-brands fa-facebook"></i><i class="fa-brands fa-linkedin"></i> <i
