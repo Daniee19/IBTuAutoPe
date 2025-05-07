@@ -29,4 +29,6 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/vehiculo_seleccionado', [VistaController::class, 'vehiculo'])->name('vehiculo');
 Route::get('/blog', [VistaController::class, 'blog'])->name('blog');
 
+Route::get('/catalogo', [CatalogoController::class, 'index'])->name('filtrar');
+
 
