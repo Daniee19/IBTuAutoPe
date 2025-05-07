@@ -1,7 +1,7 @@
 .detalle-vehiculo {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 120px 20px 80px;
     background-color: #fff;
 }
 
