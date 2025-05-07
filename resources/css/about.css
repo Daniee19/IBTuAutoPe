@@ -63,8 +63,8 @@
 .description_about {
     width: 1200px;
     height: auto;
-    background-color: #e93600ee;
-    color: white;
+    background-color: white;
+    color: rgb(0, 0, 0);
     padding: 50px;
     border-radius: 20px;
     font-size: 20px;

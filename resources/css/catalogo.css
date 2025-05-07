@@ -42,14 +42,12 @@
 /**/
 .filtro_cabecera {
     display: flex;
-    gap: 20px;
     border-bottom: 1px solid gray;
-
     justify-content: center;
 }
 
 .filtro_cabecera>div {
-    padding: 10px;
+    padding: 10px 20px;
     transition: all 0.2s;
 }
 
@@ -59,7 +57,7 @@
 }
 
 .container_filtro .filtro_cabecera div {
-    border-bottom: 2px solid transparent;
+    border-bottom: 2px solid;
 }
 
 .container_filtro .filtro_cabecera div:hover {
@@ -98,12 +96,11 @@
 .filtros select,
 .filtros input {
     border: 1px solid #ccc;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
     color: #fff;
     width: 200px;
 }
-
 
 .filtros button {
     background-color: var(--naranja-principal);
@@ -113,7 +110,7 @@
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    margin: 10px auto;
+    margin: 20px auto;
     justify-content: right;
     width: 200px;
     transition: all 0.3s;
@@ -196,6 +193,19 @@
 .tarjeta button:hover {
     background-color: var(--naranja-principal);
 }
+
+.seleccionado_filtro {
+    color: var(--naranja-principal);
+    border-bottom: 2px solid var(--naranja-principal);
+}
+
+select:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+    opacity: 0.6;
+    color:rgb(139, 139, 139);
+}
+
 
 @media(min-width:768px) {
     .filtros .ordenar_filtros {

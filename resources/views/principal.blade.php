@@ -29,16 +29,17 @@
             </div>
         </div>
     </section>
+    <!--Filtro de vehículos-->
     <section class="container_filtro" style="background: white" id="catalogo_vehiculos">
         <h2>Tenemos +2000 vehículos esperando por ti</h2>
         <div class="filtros">
             <div class="filtro_cabecera">
-                <div>
+                <div data-filtro="carro" class="item_categoria carro">
                     <i class="fa-solid fa-car"></i>
                     Autos
                 </div>
-                <div><i class="fa-solid fa-motorcycle"></i> Motos</div>
-                <div><i class="fa-solid fa-truck-front"></i> Camiones</div>
+                <div data-filtro="moto" class="item_categoria"><i class="fa-solid fa-motorcycle"></i> Motos</div>
+                <div data-filtro="camion" class="item_categoria"><i class="fa-solid fa-truck-front"></i> Camiones</div>
             </div>
             <!-- usa el .filtrar como llave -->
             <div class="filtro_contenido">
@@ -55,20 +56,14 @@
                         </div>
                         <div class="bloque_filtro">
                             <label>Elegir marca</label>
-                            <select name="marca">
-                                <option value="" selected>Todas las Marcas</option>
-                                <option value="Toyota">TOYOTA</option>
-                                <option value="Mercedes">MERCEDES</option>
-                                <option value="Honda">HONDA</option>
-                                <option value="Suzuki">SUZUKI</option>
-                                <option value="Kia">KIA</option>
-                                <option value="Chevrolet">CHEVROLET</option>
+                            <select name="marca" class="escoger_marca">
+
                             </select>
                         </div>
                         <div class="bloque_filtro">
                             <label>Elegir modelo</label>
-                            <select name="modelo">
-                                <option value="">Todos los modelos</option>
+                            <select name="modelo" class="escoger_modelo" disabled>
+
                             </select>
                         </div>
                     </div>
@@ -78,24 +73,24 @@
         </div>
 
         <!-- <div class="container" style="background: white">
-                                                                                                            <div class="vehiculos">
-                                                                                                                <h2>Vehículos Disponibles</h2>
-                                                                                                                <div class="catalogo">
-                                                                                                                    @if(!empty($vehiculos_filtro))
-                                                                                                                        @foreach($vehiculos_filtro as $v)
-                                                                                                                            <div class="tarjeta">
-                                                                                                                                <div class="imagen_car"><img src='{{ $v->foto }}' alt="Auto">
-                                                                                                                                </div>
-                                                                                                                                <p><strong>{{ $v->marca }}</strong></p>
-                                                                                                                                <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
-                                                                                                                                <p><strong>${{ $v->precio }}</strong></p>
-                                                                                                                                <button>Ver más</button>
-                                                                                                                            </div>
-                                                                                                                        @endforeach
-                                                                                                                    @endif
+                                                                                                                                        <div class="vehiculos">
+                                                                                                                                            <h2>Vehículos Disponibles</h2>
+                                                                                                                                            <div class="catalogo">
+                                                                                                                                                @if(!empty($vehiculos_filtro))
+                                                                                                                                                    @foreach($vehiculos_filtro as $v)
+                                                                                                                                                        <div class="tarjeta">
+                                                                                                                                                            <div class="imagen_car"><img src='{{ $v->foto }}' alt="Auto">
+                                                                                                                                                            </div>
+                                                                                                                                                            <p><strong>{{ $v->marca }}</strong></p>
+                                                                                                                                                            <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
+                                                                                                                                                            <p><strong>${{ $v->precio }}</strong></p>
+                                                                                                                                                            <button>Ver más</button>
+                                                                                                                                                        </div>
+                                                                                                                                                    @endforeach
+                                                                                                                                                @endif
 
-                                                                                                                </div>
-                                                                                                            </div> -->
+                                                                                                                                            </div>
+                                                                                                                                        </div> -->
         </div>
     </section>
 
@@ -291,7 +286,7 @@
         </div>
     </section>
 
-
+    <!-- Ubícanos-->
     <section class="section_ubicanos" id="ubicacion">
         <div class="contenedor_ubicanos">
 
