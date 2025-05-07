@@ -1,0 +1,137 @@
+.container_formregister {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 24px;
+    color: #1E2A38;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+.container_formregister h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--naranja-principal);
+    
+}
+.container_formregister h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #000;
+}
+.container_formregister input[type="text"],
+.container_formregister input[type="email"],
+.container_formregister input[type="password"],
+.container_formregister select {
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    color: #000;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container_formregister input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid rgb(201, 201, 201);
+    cursor: pointer;
+}
+.container_formregister input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+.container_formregister input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(250, 147, 0);
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 1;
+}
+.fila-horizontal_register {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.fila-horizontal_register > div {
+    flex: 1;
+    min-width: 250px;
+}
+.fecha-nacimiento-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.fecha-nacimiento-group select {
+    flex: 1;
+    min-width: 0;
+}
+.container_formregister button {
+    padding: 12px 24px;
+    background-color: #FF6A00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 0;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+.container_formregister button:hover {
+    background-color: #E65000;
+}
+.container_formregister label a {
+    color: #FF6A00;
+    text-decoration: none;
+}
+.container_formregister label {
+    font-size: 0.9rem;
+    color: #333;
+}
+.container_formregister input[type="checkbox"] {
+    margin-right: 6px;
+}
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .container_formregister {
+        padding: 0 16px;
+    }
+    .fila-horizontal_register {
+        flex-direction: column;
+    }
+    .fecha-nacimiento-group {
+        flex-direction: column;
+    }
+    .fecha-nacimiento-group select {
+        width: 100%;
+    }
+    .container_formregister button {
+        width: 100%;
+    }
+}

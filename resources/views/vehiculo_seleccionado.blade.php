@@ -16,11 +16,7 @@
             <div class="indicador-imagen" id="indicador">1</div>
             <button class="btn-transparente" id="siguiente">⟩</button>
                 </div>
-
-
-
             </div>
-            
         </div>
 
         <!-- INFO DEL VEHÍCULO - DEBE IR AQUÍ -->
@@ -78,7 +74,6 @@
         mostrarImagen(indice);
     });
 </script>
-
 
     <section class="section_información_detallada">
         <div class="container_informacion_detallada">

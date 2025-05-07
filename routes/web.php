@@ -1,62 +1,34 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\VentaVehiculoController;
+use App\Http\Controllers\VistaController;
 use Dotenv\Dotenv;
-Route::get('/', function () {
-    return view('principal');
-});
+use App\Http\Controllers\CatalogoController;
 
-Route::get('/vehiculo_seleccionado', function () {
-    return view('vehiculo_seleccionado');
-});
 
-Route::post('/principal', function () {
+// Página principal
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-    $dotenv = Dotenv::createImmutable(__DIR__ . "/../");
-    $dotenv->load();
+// Formularios
+Route::post('/contacto', [ContactoController::class, 'enviar'])->name('contacto.enviar');
+Route::post('/formventas', [VentaVehiculoController::class, 'procesar'])->name('formventas.procesar');
+Route::get('/formventas', function () { return view('formventas');})->name('formventas.form');
 
-    //Acceder a la variable de entorno
-    $SECRET_KEY = getenv("SECRET_KEY");
+// Autenticación
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login.form');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::get('/register', [AuthController::class, 'registerForm'])->name('register.form');
+Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    if (isset($_POST["enviar_contactanos"])) {
-        $nombres = $_POST["nombres"];
-        $email = $_POST["email"];
-        $razon = $_POST["razon"];
-        $mensaje = $_POST["mensaje"];
+// Vistas generales
+Route::get('/vehiculo_seleccionado', [VistaController::class, 'vehiculo'])->name('vehiculo');
+Route::get('/blog', [VistaController::class, 'blog'])->name('blog');
 
-        //Te va a dar la ip del servidor
-        $ip = $_SERVER["REMOTE_ADDR"];
-        $captcha = $_POST["g-recaptcha-response"];
+Route::get('/catalogo', [CatalogoController::class, 'index'])->name('filtrar');
 
-        $respuesta = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$SECRET_KEY&response=$captcha&remoteip=$ip");
-
-        $atributos = json_decode($respuesta, TRUE);
-
-        //Array para detectar varios errores de los valores ingresados
-        $errores = array();
-
-        //En caso que no se haya marcado la casilla de no soy un robot o si detecta algo erróneo entonces mostrará este error
-        if (!$atributos["success"]) {
-            $errores[] = "Verificar captcha";
-        }
-
-        if (empty($nombres)) {
-            $errores[] = "El campo nombre es obligatorio";
-        }
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errores[] = "El correo electrónico no es correcto";
-        }
-
-        if (empty($razon)) {
-            $errores[] = "El campo razón es obligatorio";
-        }
-        if (empty($mensaje)) {
-            $errores[] = "El campo mensaje es obligatorio";
-        }
-
-    }
-
-    return view('principal', ['errores' => $errores]);
-});
 

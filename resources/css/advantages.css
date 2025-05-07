@@ -1,13 +1,14 @@
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
 /* carrusel*/
 .marcas-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
+}
+
+.marcas-section h2,
+.ventajas-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .marcas-container {
@@ -39,7 +40,7 @@ h2 {
 
 /* ventajas */
 .ventajas-section {
-    padding: 30px 20px 100px;
+    padding: 30px 20px 40px;
     text-align: center;
 }
 
