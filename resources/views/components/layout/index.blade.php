@@ -20,13 +20,13 @@
     
         <ul class="lista">
             <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i></li>
-            <li><a href="{{ route('home') }}">Principal</a></li>
-            <li><a href="{{ url('/#ventajas') }}">Ventajas</a></li>
-            <li><a href="{{ url('/#vehiculos') }}">Vehículos</a></li>
-            <li><a href="{{ url('/#quienes_somos') }}">¿Quiénes somos?</a></li>
-            <li><a href="{{ url('/#blog') }}">Blog</a></li>
-            <li><a href="{{ url('/#contacto') }}">Contacto</a></li>
-            <li><a href="{{ url('/#ubicacion') }}">Ubicación</a></li>
+            <li><a href="./#home">Principal</a></li>
+            <li><a href="./#ventajas">Ventajas</a></li>
+            <li><a href="./#catalogo_vehiculos">Vehículos</a></li>
+            <li><a href="./#quienes_somos">¿Quiénes somos?</a></li>
+            <li><a href="./#blog">Blog</a></li>
+            <li><a href="./#contacto">Contacto</a></li>
+            <li><a href="./#ubicacion'">Ubicación</a></li>
         </ul>
         
     
