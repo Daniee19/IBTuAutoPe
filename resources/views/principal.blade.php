@@ -78,24 +78,24 @@
         </div>
 
         <!-- <div class="container" style="background: white">
-                                                                                                        <div class="vehiculos">
-                                                                                                            <h2>Vehículos Disponibles</h2>
-                                                                                                            <div class="catalogo">
-                                                                                                                @if(!empty($vehiculos_filtro))
-                                                                                                                    @foreach($vehiculos_filtro as $v)
-                                                                                                                        <div class="tarjeta">
-                                                                                                                            <div class="imagen_car"><img src='{{ $v->foto }}' alt="Auto">
+                                                                                                            <div class="vehiculos">
+                                                                                                                <h2>Vehículos Disponibles</h2>
+                                                                                                                <div class="catalogo">
+                                                                                                                    @if(!empty($vehiculos_filtro))
+                                                                                                                        @foreach($vehiculos_filtro as $v)
+                                                                                                                            <div class="tarjeta">
+                                                                                                                                <div class="imagen_car"><img src='{{ $v->foto }}' alt="Auto">
+                                                                                                                                </div>
+                                                                                                                                <p><strong>{{ $v->marca }}</strong></p>
+                                                                                                                                <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
+                                                                                                                                <p><strong>${{ $v->precio }}</strong></p>
+                                                                                                                                <button>Ver más</button>
                                                                                                                             </div>
-                                                                                                                            <p><strong>{{ $v->marca }}</strong></p>
-                                                                                                                            <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
-                                                                                                                            <p><strong>${{ $v->precio }}</strong></p>
-                                                                                                                            <button>Ver más</button>
-                                                                                                                        </div>
-                                                                                                                    @endforeach
-                                                                                                                @endif
+                                                                                                                        @endforeach
+                                                                                                                    @endif
 
-                                                                                                            </div>
-                                                                                                        </div> -->
+                                                                                                                </div>
+                                                                                                            </div> -->
         </div>
     </section>
 
@@ -193,11 +193,9 @@
     </section>
     <!-- Blog -->
 
-  
-    
-    <section class="blog" style="background: var(--gris-oscuro); flex-direction: column">
+    <section class="blog" style="background: var(--gris-oscuro); flex-direction: column" id="blog">
         <h1>Ultima noticia destacada</h1>
-        <div style="flex-direction: row; display:flex; gap:20px;">
+        <div class="blog_contenedor">
             <div class="blog_contenido">
                 <div class="blog_contenido_imagen">
                     <img src="{{ asset('images/honda_sorpresa.png') }}" alt="Blog Image">
@@ -206,15 +204,11 @@
                     <h2>¡Honda prepara una sorpresa!</h2>
                     <p>Publicado: 10/02/2025</p>
                 </div>
-                <a 
-                    href="https://publimotos.com/actualidad/mundo/honda-prepara-una-sorpresa-filtrado-el-diseno-de-su-nueva-moto/"
-                    class="btn_leer_mas" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >Leer Más</a>
-    
+                <a href="https://publimotos.com/actualidad/mundo/honda-prepara-una-sorpresa-filtrado-el-diseno-de-su-nueva-moto/"
+                    class="btn_leer_mas" target="_blank" rel="noopener noreferrer">Leer Más</a>
+
             </div>
-    
+
             <div class="blog_contenido">
                 <div class="blog_contenido_imagen">
                     <img src="{{ asset('images/top_autos_vendidos.png') }}" alt="Blog Image">
@@ -223,13 +217,9 @@
                     <h2>Top autos mas vendidos en 2025</h2>
                     <p>Publicado: 02/04/2025</p>
                 </div>
-                <a 
-                    href="https://www.coches.net/noticias/coches-mas-vendidos-2025" 
-                    class="btn_leer_mas" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >Leer Más</a>
-    
+                <a href="https://www.coches.net/noticias/coches-mas-vendidos-2025" class="btn_leer_mas" target="_blank"
+                    rel="noopener noreferrer">Leer Más</a>
+
             </div>
             <div class="blog_contenido">
                 <div class="blog_contenido_imagen">
@@ -239,18 +229,15 @@
                     <h2>¿Volkswagen en crisis?</h2>
                     <p>Publicado: 02/12/2024</p>
                 </div>
-                <a 
-                    href="https://www.bbc.com/mundo/articles/c8dqp0j7n3vo" 
-                    class="btn_leer_mas"
-                    target="_blank" rel="noopener noreferrer"
-                >
-                Leer Más
+                <a href="https://www.bbc.com/mundo/articles/c8dqp0j7n3vo" class="btn_leer_mas" target="_blank"
+                    rel="noopener noreferrer">
+                    Leer Más
                 </a>
-    
+
             </div>
         </div>
-       
-    </section>   
+
+    </section>
 
     <!--Contáctanos-->
 
