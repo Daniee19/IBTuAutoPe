@@ -10,6 +10,12 @@ Route::get('/vehiculo_seleccionado', function () {
     return view('vehiculo_seleccionado');
 });
 
+Route::get('/mis_vistas', function () {
+    return view('mis_vistas');
+});
+
+
+
 Route::post('/principal', function () {
 
     $dotenv = Dotenv::createImmutable(__DIR__ . "/../");
