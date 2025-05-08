@@ -19,7 +19,7 @@
         </div>
     
         <ul class="lista">
-            <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #ffffff;"></i></li>
+            <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></li>
             <li><a href="./#home">Principal</a></li>
             <li><a href="./#ventajas">Ventajas</a></li>
             <li><a href="./#catalogo_vehiculos">Vehículos</a></li>
@@ -38,10 +38,10 @@
             <a href="{{ route('login.form') }}">
                 <div class="icono_login_hamburguesa">
                     <div class="i_text_login">
-                        <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #ffffff"></i>&nbsp;Login
+                        <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #000000"></i>&nbsp;Login
                     </div>
                     <div class="iconito_hamburguesa">
-                        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i>
+                        <i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
                     </div>
                 </div>
             </a>
@@ -49,7 +49,7 @@
             <form action="{{ route('logout') }}" method="GET" style="display: inline;">
                 <button class="icono_login_hamburguesa" style="border: none; background: none; cursor: pointer;">
                     <div class="i_text_login">
-                        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #ffffff"></i>&nbsp;Cerrar sesión
+                        <i class="fa-solid fa-right-from-bracket fa-xl" style="color: #000000"></i>&nbsp;Cerrar sesión
                     </div>
                 </button>
             </form>

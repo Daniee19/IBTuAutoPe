@@ -100,6 +100,7 @@ class AuthController extends Controller
             'genero' => $request->genero,
             'fecha_nacimiento' => $fechaNacimiento,
             'fines_adicionales' => $request->has('fines_adicionales'),
+            
         ]);
     
         return redirect('/login')->with('success', 'Usuario registrado correctamente.');
