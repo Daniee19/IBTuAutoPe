@@ -29,7 +29,7 @@
             </div>
         </div>
     </section>
-    <!--Filtro de vehículos-->
+    <!--Filtro general vehiculos-->
     <section class="container_filtro" style="background: white" id="catalogo_vehiculos">
         <h2>Tenemos +2000 vehículos esperando por ti</h2>
         <div class="filtros">
@@ -49,9 +49,9 @@
                             <label>Tipo de vehículo</label>
                             <select name="tipo_vehiculo">
                                 <option value="" selected>Todos los vehículos</option>
-                                <option value="Toyota">Usados</option>
-                                <option value="Mercedes">Seminuevos</option>
-                                <option value="Honda">Nuevos</option>
+                                <option value="usados">Usados</option>
+                                <option value="seminuevos">Seminuevos</option>
+                                <option value="nuevos">Nuevos</option>
                             </select>
                         </div>
                         <div class="bloque_filtro">
@@ -70,27 +70,6 @@
                     <button type="submit">Filtrar</button>
                 </form>
             </div>
-        </div>
-
-        <!-- <div class="container" style="background: white">
-                                                                                                                                        <div class="vehiculos">
-                                                                                                                                            <h2>Vehículos Disponibles</h2>
-                                                                                                                                            <div class="catalogo">
-                                                                                                                                                @if(!empty($vehiculos_filtro))
-                                                                                                                                                    @foreach($vehiculos_filtro as $v)
-                                                                                                                                                        <div class="tarjeta">
-                                                                                                                                                            <div class="imagen_car"><img src='{{ $v->foto }}' alt="Auto">
-                                                                                                                                                            </div>
-                                                                                                                                                            <p><strong>{{ $v->marca }}</strong></p>
-                                                                                                                                                            <p>{{ $v->anio }} | {{ $v->transmision }} | {{ $v->combustible }}</p>
-                                                                                                                                                            <p><strong>${{ $v->precio }}</strong></p>
-                                                                                                                                                            <button>Ver más</button>
-                                                                                                                                                        </div>
-                                                                                                                                                    @endforeach
-                                                                                                                                                @endif
-
-                                                                                                                                            </div>
-                                                                                                                                        </div> -->
         </div>
     </section>
 
@@ -145,7 +124,6 @@
             </div>
         </section>
     </section>
-    <!--Catalogo-->
 
     <!--¿Quiénes somos?-->
     <section class="quienes_somos_section" id="quienes_somos">

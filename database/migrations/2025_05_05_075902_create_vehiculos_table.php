@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('marca');
             $table->string('modelo');
+            $table->string("tipo_vehiculo");
             $table->double('precio');
             $table->string('anio');
             $table->string('hasta');

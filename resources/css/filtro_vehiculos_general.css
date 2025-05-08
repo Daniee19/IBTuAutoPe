@@ -1,0 +1,156 @@
+.container_filtro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_filtro>h2 {
+    font-size: 1.5rem;
+    font-size: 2rem;
+    width: 85%;
+    padding: 50px 0px 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.filtros {
+    max-width: 1100px;
+    background-color: var(--gris-oscuro);
+    margin: 0 auto 20px;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid var(--gris-oscuro);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.759);
+}
+
+.filtros option {
+    background: var(--gris-oscuro);
+}
+
+.filtros form {
+    text-align: center;
+}
+
+.filtros .ordenar_filtros {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+/**/
+.filtro_cabecera {
+    display: flex;
+    border-bottom: 1px solid gray;
+    justify-content: center;
+}
+
+.filtro_cabecera>div {
+    padding: 10px 20px;
+    transition: all 0.2s;
+}
+
+.container_filtro .filtro_contenido {
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.container_filtro .filtro_cabecera div {
+    border-bottom: 2px solid;
+}
+
+.container_filtro .filtro_cabecera div:hover {
+    color: var(--naranja-principal);
+    cursor: pointer;
+    border-bottom: 2px solid var(--naranja-principal);
+}
+
+.filtro_contenido .bloque_filtro {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.bloque_filtro>label {
+    font-weight: 600;
+}
+
+/**/
+.filtros label,
+.filtros select,
+.filtros input,
+.filtros button {
+    margin-bottom: 0px;
+}
+
+.filtros h3 {
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.filtros select,
+.filtros input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    width: 200px;
+}
+
+.filtros button {
+    background-color: var(--naranja-principal);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px auto;
+    justify-content: right;
+    width: 200px;
+    transition: all 0.3s;
+}
+
+.filtros button:hover {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    display: flex;
+}
+
+.seleccionado_filtro {
+    color: var(--naranja-principal);
+    border-bottom: 2px solid var(--naranja-principal);
+}
+
+select:disabled {
+    background-color: #eee;
+    cursor: not-allowed;
+    opacity: 0.6;
+    color:rgb(139, 139, 139);
+}
+
+
+@media(min-width:768px) {
+    .filtros .ordenar_filtros {
+        flex-direction: row;
+    }
+}
+
+@media (min-width:1200px) {
+    .filtros {
+        min-width: 1000px;
+    }
+
+    .filtros select,
+    .filtros input {
+        width: 300px;
+    }
+}

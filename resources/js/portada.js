@@ -9,9 +9,11 @@ const imagenes = [
 let indice = 0;
 
 //Cada 6 segundos se cambiará la imagen del array "imagenes"
-setInterval(() => {
-    //Cambiar la imagen despues de desvanecer
-    indice = (indice + 1) % imagenes.length;
-    imagen.src = imagenes[indice];
+if (imagen) {
+    setInterval(() => {
+        //Cambiar la imagen despues de desvanecer
+        indice = (indice + 1) % imagenes.length;
+        imagen.src = imagenes[indice];
 
-}, 6000);
+    }, 6000);
+}
