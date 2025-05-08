@@ -49,9 +49,9 @@
                             <label>Tipo de vehículo</label>
                             <select name="tipo_vehiculo">
                                 <option value="" selected>Todos los vehículos</option>
-                                <option value="usados">Usados</option>
-                                <option value="seminuevos">Seminuevos</option>
-                                <option value="nuevos">Nuevos</option>
+                                <option value="Usado">Usados</option>
+                                <option value="Seminuevo">Seminuevos</option>
+                                <option value="Nuevo">Nuevos</option>
                             </select>
                         </div>
                         <div class="bloque_filtro">

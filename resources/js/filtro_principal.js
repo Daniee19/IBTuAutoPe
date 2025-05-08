@@ -73,7 +73,7 @@ if (items_categoria && select_escoger_marca && select_escoger_modelo) {
     //Función para habilitar y deshabilitar el select 'modelo', si en todo caso se selecciona una marca
     function select_modelo(nombreMarca, filtroCategoria) {
         console.log("Nombre de marca: ", nombreMarca);
-        console.log(filtroCategoria)
+        console.log("Nombre de la categoria", filtroCategoria)
         // 
         let modelo = document.querySelector(".escoger_modelo");
         //Si en caso selecciona un option que sea diferente que el valor por defecto 'todas las marcas'
@@ -118,7 +118,8 @@ if (items_categoria && select_escoger_marca && select_escoger_modelo) {
     items_categoria.forEach(
         //En primer lugar, damos el permiso para permitir hacer click en los divs 
         t => t.addEventListener("click", function (event) {
-            select_modelo("Todas las marcas", valor_agilizar_categoria);
+            //Al hacer clic en otra categoría se limpia los datos y se bloque el select modelo
+            select_modelo("", valor_agilizar_categoria);
             //Quitar la clase de todos los seleccionados
             items_categoria.forEach(i => i.classList.remove("seleccionado_filtro"));
 
