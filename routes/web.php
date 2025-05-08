@@ -10,8 +10,15 @@ use Dotenv\Dotenv;
 use App\Http\Controllers\CatalogoController;
 
 
-// Página principal
+
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/mis_vistas', function () {
+    return view('mis_vistas');
+});
+
+
 
 // Formularios
 Route::post('/contacto', [ContactoController::class, 'enviar'])->name('contacto.enviar');
