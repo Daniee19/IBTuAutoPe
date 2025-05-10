@@ -1,22 +1,24 @@
 .section_catalogo {
-    background-color: #eaeaea;
-    padding: 120px 25px;
+    background-color: #f3f3f3;
+    padding: 100px 0px;
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    gap: 40px;
+    min-height: 100vh;
 }
 
 .section_catalogo h2 {
     text-align: left;
     font-size: 1.8rem;
-    font-weight: bold;
+    display: none;
+    font-style: italic;
+    font-family: fantasy;
 }
 
 .container_catalogo {
     display: flex;
     margin: 0 auto;
     background: white;
-    width: 900px;
+    width: 100%;
 }
 
 .tarjeta {
@@ -64,14 +66,142 @@
     margin-left: 0px;
 }
 
+.catalogo_filtro_der {
+    padding: 10px 0px 0px;
+    margin: 0 auto;
+}
+
 .catalogo_filtro_der>p {
     text-align: right;
 }
 
 .catalogo_filtro_izq {
-    background-color: rgb(178, 178, 178);
-    padding: 0px 50px;
+    padding: 0px 20px;
+    /* width: 300px; */
+    display: none;
+    flex-direction: column;
 }
+
+.filtros_especificos_trash {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    width: 160px;
+}
+
+.cantidad_vehiculos {
+    padding: 10px 0px;
+    display: none;
+}
+
+/*PAGINATOR*/
+/*Ocultar el texto del paginator*/
+/* nav[role="navigation"] p.text-sm {
+    display: none;
+} */
+.contenedor_paginacion {
+    justify-content: center;
+    box-shadow: none;
+}
+
+/* Cambiar color de los números y botones */
+nav[role="navigation"] .relative .inline-flex.items-center {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    padding: 0.5rem 0.75rem;
+    transition: background-color 0.3s ease;
+    border: transparent;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+nav[role="navigation"] .relative .inline-flex.items-center:hover {
+    background-color: var(--naranja-principal);
+    color: white;
+}
+
+nav[role="navigation"] span[aria-current="page"] {
+    background-color: var(--naranja-principal);
+    font-weight: bold;
+}
+
+/*Color de texto de la página actual*/
+nav[role="navigation"] span[aria-current="page"] .inline-flex.items-center {
+    color: white;
+}
+
+.filtro_botones_filtros {
+    display: flex;
+    gap: 10px;
+}
+
+.filtro_botones_filtros>div {
+    background-color: lightgray;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.filtro_botones_filtros>div:hover {
+    background-color: white;
+    color: var(--naranja-principal);
+    cursor: pointer;
+    border-bottom: 1px solid #000000;
+}
+
+.texto_incorporado1 {
+    display: flex;
+    margin-bottom: 6px;
+    gap: 12px;
+}
+
+.texto_incorporado2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    gap: 12px;
+}
+
+.icono_open_filtros:hover {
+    cursor: pointer;
+}
+
+.aparecer_contenedor_filtros {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.filtros_especificos_trash .icono_x {
+    display: flex;
+}
+
+.filtros_especificos_trash .icono_x:hover {
+    cursor: pointer;
+}
+
+.catalogo_info_tipo_vehiculo {
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: fantasy;
+}
+
+.iconitos_close_trash {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+/*Cambiar color a los botones cuando es responsive*/
+.responsive_botones{
+    background-color: var(--naranja-principal);
+    border: transparent;
+}
+
 
 @media(min-width: 576px) {
     .tarjeta {
@@ -82,5 +212,65 @@
 
     .tarjeta_info {
         margin-left: 10px;
+        font-size: 1.2rem;
+        font-weight: 100;
+    }
+}
+
+@media(min-width: 992px) {
+    .section_catalogo{
+        padding-right: 30px;
+    }
+    .container_catalogo {
+        width: 900px;
+    }
+
+}
+
+@media(min-width:1200px) {
+    .section_catalogo {
+        justify-content: center;
+    }
+
+    .catalogo_filtro_izq {
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        position: relative;
+    }
+
+    .catalogo_filtro_der {
+        margin: 0px;
+    }
+
+    .texto_incorporado1 {
+        display: none;
+    }
+
+    .texto_incorporado2>div {
+        display: none;
+    }
+
+    .texto_incorporado2 {
+        justify-content: end;
+    }
+
+    .section_catalogo h2 {
+        display: flex;
+    }
+
+    .cantidad_vehiculos {
+        display: flex;
+    }
+
+    .filtros_especificos_trash .icono_x {
+        display: none;
+    }
+
+    .filtros_especificos_trash {
+        border-top: 1px solid rgb(144, 144, 144);
+    }
+    .aparecer_contenedor_filtros{
+        background-color: transparent;
     }
 }

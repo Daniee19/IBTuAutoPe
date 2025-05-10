@@ -21,8 +21,8 @@
         <ul class="lista">
             <li class="x_panel"><i class="fa-solid fa-x fa-lg" style="color: #000000;"></i></li>
             <li><a href="./#principal">Principal</a></li>
-            <li><a href="./#ventajas">Ventajas</a></li>
             <li><a href="./#catalogo_vehiculos">Vehículos</a></li>
+            <li><a href="./#ventajas">Ventajas</a></li>
             <li><a href="./#quienes_somos">¿Quiénes somos?</a></li>
             <li><a href="./#blog">Blog</a></li>
             <li><a href="./#contacto">Contacto</a></li>
@@ -34,16 +34,18 @@
         @endphp
 
         @if (!$logueado)
-            <a href="{{ route('login.form') }}">
-                <div class="icono_login_hamburguesa">
+
+            <div class="icono_login_hamburguesa">
+                <a href="{{ route('login.form') }}">
                     <div class="i_text_login">
                         <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #000000"></i>&nbsp;Login
                     </div>
-                    <div class="iconito_hamburguesa">
-                        <i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
-                    </div>
+                </a>
+                <div class="iconito_hamburguesa">
+                    <i class="fa-solid fa-bars fa-2xl" style="color: #000000;"></i>
                 </div>
-            </a>
+            </div>
+
         @else
             <form action="{{ route('logout') }}" method="GET" style="display: inline;">
                 <button class="icono_login_hamburguesa" style="border: none; background: none; cursor: pointer;">
@@ -62,7 +64,7 @@
         @yield("content")
     </main>
 
-    <footer style="background-color: var(--gris-oscuro);">
+    <footer style="background-color: var(--gris-oscuro);z-index: 99;position: relative;">
         <div class="footer-container">
             <div class="foot-primario">
                 <h2>TuAutoPe <img class="logo_icono" src="{{ asset("images/img_logo.png") }}" alt="logo"></h2>

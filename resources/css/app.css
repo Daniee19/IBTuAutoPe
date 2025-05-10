@@ -19,6 +19,12 @@
     --gris-input: #EBEBEB;
     --gris-oscuro: #2c2c2c;
     scroll-behavior: smooth;
+
+}
+
+/*Para evitar que el contenido quede un poquito hacia la izquierda, y de esta manera todo este más uniforme*/
+html {
+    overflow-y: scroll;
 }
 
 @import "./index.css";

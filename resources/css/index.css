@@ -18,6 +18,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 999;
+    text-align: center;
 }
 
 .logo_icono {
@@ -52,6 +53,7 @@ body {
 .icono_login_hamburguesa {
     display: flex;
     gap: 16px;
+    align-items: center;
 }
 
 .icono_login_hamburguesa:hover {

@@ -6,3 +6,4 @@ import './advantages.js';
 import './login.js';
 import './register.js';
 import './filtro_principal.js';
+import './menu_filtros.js';

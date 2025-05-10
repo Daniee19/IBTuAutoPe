@@ -15,7 +15,7 @@ class CatalogoController extends Controller
         $f_marca = $request->input("marca"); //toyota
         $f_modelo = $request->input("modelo"); //collab
         $f_tipo_v = $request->input("tipo_vehiculo"); //nuevo
-       
+
         $vehiculos = [];
         if ($f_marca === "Todos los modelos") {
             $f_marca = "";
@@ -26,16 +26,22 @@ class CatalogoController extends Controller
             $vehiculos = Vehiculo::orWhere('marca', $f_marca)
                 ->orWhere("modelo", $f_modelo)
                 ->orWhere("tipo_vehiculo", $f_tipo_v)
-                ->get(); // <-- retorna una colección, no se trabaja como array [se trabajan diferente, por ejemplo no usar empty(), sino usar _->isEmpty() para colecciones]
+                ->paginate(5); // <-- retorna una colección, no se trabaja como array [se trabajan diferente, por ejemplo no usar empty(), sino usar _->isEmpty() para colecciones]
+            //5 productos por página
 
+            $vehiculos_cantidad_total = Vehiculo::orWhere('marca', $f_marca)
+                ->orWhere("modelo", $f_modelo)
+                ->orWhere("tipo_vehiculo", $f_tipo_v)
+                ->get();
             //Por cierto para ver la bd, escribe: php artisan tinker
             //Y para ver todos los registros escribe: \App\Models\Vehiculo::all();
         } else {
             //Si no se seleccionó nada entonces muestra todo
-            $vehiculos = Vehiculo::all();
+            $vehiculos = Vehiculo::paginate(5);
+            $vehiculos_cantidad_total = Vehiculo::all();
         }
 
-        return view("catalogo_vehiculos", ['vehiculos_filtro' => $vehiculos, 'f_marca' => $f_marca, 'f_modelo' => $f_modelo, 'f_tipo_v' => Str::lower($f_tipo_v)]);
+        return view("catalogo_vehiculos", ['vehiculos_filtro' => $vehiculos, 'f_marca' => $f_marca, 'f_modelo' => $f_modelo, 'f_tipo_v_min' => Str::lower($f_tipo_v), 'f_tipo_v' => $f_tipo_v, 'vehiculos_cantidad_total' => $vehiculos_cantidad_total]);
     }
 
 
